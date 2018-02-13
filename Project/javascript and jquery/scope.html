@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       var g=40;
+        function foo()
+     {
+        //  var x=10;
+        //  var y=20;
+        // alert("x:"+x);
+    //     alert("z:"+z); ///undefined because of hoisting
+       //  alert("magic:"+magic);
+        // alert("g:"+g);
+         {
+            // alert("y:"+y);
+            magic=50;
+            //var z=30;
+           // alert("z:"+z);
+           // alert("g:"+g);
+            alert("magic:"+magic);
+         }
+     }
+     foo();
+  //   alert("x:"+x);
+ //    alert("y:"+y);
+      // alert("g:"+g);
+      alert("magic:"+magic);
+    </script>
+     
+</body>
+</html>

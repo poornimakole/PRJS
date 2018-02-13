@@ -1,0 +1,33 @@
+package com.psl.client;
+
+import java.util.List;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.psl.bean.User;
+import com.psl.service.UserService;
+
+public class Client {
+
+public static void main(String[] args) {
+		
+
+		ApplicationContext context=new ClassPathXmlApplicationContext("Db.xml");
+		
+		UserService s =context.getBean("service",UserService.class);
+		User u =context.getBean("user",User.class);
+		
+		s.createUser(u);
+//		List<Employee> eList=s.getAllEmployee();
+//		
+//		for (Employee employee : eList) {
+//			System.out.println(employee);
+//		}
+//		
+
+		System.out.println("done!");
+		
+	}
+	
+}

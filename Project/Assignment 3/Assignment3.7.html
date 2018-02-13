@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<table>
+		<tr>
+		<td><label>Username</label></td>
+		<td><input type="text" id="username"/></td>
+		</tr>
+		
+		<tr>
+		<td><label>Password</label></td>
+		<td><input type="password" id="pass"/></td>
+		</tr>
+		
+		<tr>
+		<button id="b">Submit</button>
+		</tr>
+		
+</table>
+<script>
+document.getElementById("b").addEventListener("click",function(){
+	xml=new XMLHttpRequest();
+	 var user=document.getElementById("username").value;
+	 var pass=document.getElementById("pass").value;
+	 var url="UserDetails.jsp";
+	 xml.open("POST",url,true);
+	 xml.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+	 xml.onreadystatechange=handleResponse;
+	 var data="name="+user+"&&pwd="+pass;
+	 xml.send(data);
+	 
+},true);
+function handleResponse(){
+	if(xml.readyState==4 && xml.status==200){
+		var response=xml.responseText;
+		obj=JSON.parse(response);
+		for(var key in obj){
+			s=obj[key];
+		}
+		alert("user "+s);
+	}
+	
+}
+
+</script>
+
+</body>
+</html>

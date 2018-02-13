@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inline Semantics Markup</title>
+</head>
+<body>
+    <p>This is an <mark>important</mark> paragraph</p>
+   Meter: <meter value="40" low="40" high="90" min="0" max="100" optimum="100"></meter><br/>
+   Meter:<meter value="20" low="40" high="90" min="0" max="100" optimum="100"></meter><br/>
+   Meter: <meter value="90" low="40" high="90" min="0" max="100" optimum="100"></meter><br/>
+
+   Progress: <progress value="60" max="100">60% completed</progress><br>
+   Time:<time  datetime="14:00">02:00PM</time><br>
+
+   <input type="text" value="2">+
+   <input type="text" value="2">=
+   <output>4</output>
+   <br><br>
+
+   <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+    <input type="number" id="a" value="50">
+    +<input type="number" id="b" value="50">
+    =<output name="x" for="a b">100</output>
+  </form>
+
+  
+</body>
+</html>

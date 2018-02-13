@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var bank= [ 
+   {
+       name:'JOHN',
+       account:'Saving',
+       AccountStatus:'blocked'
+   },
+   {
+       name:'KATE',
+       account:'Current',
+       AccountStatus:'active'
+   },
+   {
+       name:'MIKE',
+       account:'Saving', 
+       AccountStatus:'active'
+   }];
+
+   for (var i = 0; i < bank.length; i++) {
+       var element = bank[i];
+       if(element.AccountStatus==='active')
+       {
+              alert(element.name+" account status is "+element.account+"\n Account is Active");
+           
+       }
+       else
+       {
+            alert(element.name+" account status is "+element.account+"\n You need to activate your account");
+       }
+       
+   }
+
+    </script>
+</body>
+</html>

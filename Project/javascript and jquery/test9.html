@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script>
+        $(document).ready(function(){
+            var cnt1=0;
+            var cnt2=0;
+
+            $("#btn1").click(function(){
+                  cnt1=cnt1+1;
+                  $("#span1").text(cnt1);
+            })
+
+            $("#btn2").click(function(){
+                  cnt2=cnt2+1;
+                  $("#btn1").trigger("click");
+                  $("#span2").text(cnt2);
+                
+            })
+            $("p").css("color","blue").css("fontWeight","bold");
+            $("span").css("color","red").css("fontWeight","bold");
+        })
+    </script>
+</head>
+<body>
+    <button id="btn1">Button 1</button>
+    <button id="btn2">Button 2</button>
+    <p id="para1"><span id="span1"></span> button 1 clicks!</p>
+    <p id="para2"><span id="span2"></span> button 2 clicks!</p>
+</body>
+</html>

@@ -1,0 +1,22 @@
+package com.psl.q4;
+
+public class TaxCalculator {
+	
+	public double calculateTax(String empName,boolean isIndian,double empSal)
+	{
+		double taxAmount=0;
+		
+		if(!isIndian)
+		{
+			try {
+				throw new CountryNotValidException("Employees citizenship is not valid...!!!");
+			} catch (CountryNotValidException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		return taxAmount;
+		
+	}
+
+}

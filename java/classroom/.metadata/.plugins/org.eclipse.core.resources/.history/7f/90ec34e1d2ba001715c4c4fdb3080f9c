@@ -1,0 +1,10 @@
+package com.psl.q5;
+
+public class Client {
+
+	
+	public static void main(String[] args) {
+		
+		EmpManagement empm=new EmpManagement(12, "pooja","margao","675858", 20000);
+	}
+}

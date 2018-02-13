@@ -1,0 +1,69 @@
+package com.psl.q4;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Client {
+	
+	private Employee inputData() throws CustomException {
+		// TODO Auto-generated method stub
+	    Employee e=new Employee();
+	    Scanner sc=new Scanner(System.in);
+	    
+	    SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/yyyy",Locale.ENGLISH);
+		System.out.println("Enter Employee Name");
+		 String name=sc.next();
+		 if(name==null)
+		 {
+			 throw new CustomException("name cannot be empty.....");
+		 }
+		  e.setName(name);
+		 System.out.println("Enter Employee Address");
+		 String add=sc.next();
+		 if(add==null)
+		 {
+			 throw new CustomException("Address is mandatory.....");
+		 }
+		 e.setAddress(add);
+		 System.out.println("Enter Employee Date of birth(dd/mm/yyyy)");
+		 String date=sc.next();
+		  try {
+			e.setDateOfBirth(sdf.parse(date));
+		} catch (ParseException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		System.out.println("Enter Employee Id");
+		int id=sc.nextInt();
+		if(id<=0)
+		{
+			throw new CustomException("Employee id cannot be zero or negative ");
+		}
+		e.setId(id);
+		System.out.println("Enter Employee Salary");
+		int sal=sc.nextInt();
+		if(sal<=0)
+		{
+			throw new CustomException("Employee salary cannot be zero or negative ");
+		}
+		e.setEmployeeSalary(sal);
+		sc.close();
+		return e;
+	}
+
+	public static void main(String[] args) 
+	{
+		Client c=new Client();
+		
+		 try {
+			Employee e= c.inputData();
+		} catch (CustomException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	
+}

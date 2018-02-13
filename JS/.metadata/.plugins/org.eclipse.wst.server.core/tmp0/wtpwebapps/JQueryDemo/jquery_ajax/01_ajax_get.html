@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+	$("#playerno").blur(function(){
+		var playerno=$("#playerno").val();
+		var url="requestPlayerProcessorJSON.jsp?playerno="+playerno;
+		$.ajax({
+			type:"GET",
+			url: url,
+			dataType:"JSON",
+			success:function(response){
+				console.log(response);
+				$("#name").val(response.name);
+				$("#city").val(response.city);
+			}
+			
+		})
+		
+	})
+	
+
+         
+});
+</script>     
+</head>
+<body>
+<table>
+<tr><td><label>Player No</label></td>
+<td><input type="text" id="playerno"/>Press TAB!</td></tr>
+<tr><td><label>Player Name</label></td>
+<td><input type="text" id="name"/></td></tr>
+<tr><td><label>Player City</label></td>
+<td><input type="text" id="city"/></td></tr>
+</table>
+</body>
+</html>

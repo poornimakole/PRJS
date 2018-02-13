@@ -1,0 +1,47 @@
+package com.app.model;
+
+public class Address {
+
+	int flatNo;
+	String locality;
+	String state;
+	long pinCode;
+	
+	
+	public Address(int flatNo, String locality, String state, long pinCode) {
+		super();
+		this.flatNo = flatNo;
+		this.locality = locality;
+		this.state = state;
+		this.pinCode = pinCode;
+	}
+	
+	
+	public int getFlatNo() {
+		return flatNo;
+	}
+	public void setFlatNo(int flatNo) {
+		this.flatNo = flatNo;
+	}
+	public String getLocality() {
+		return locality;
+	}
+	public void setLocality(String locality) {
+		this.locality = locality;
+	}
+	public String getState() {
+		return state;
+	}
+	public void setState(String state) {
+		this.state = state;
+	}
+	public long getPinCode() {
+		return pinCode;
+	}
+	public void setPinCode(long pinCode) {
+		this.pinCode = pinCode;
+	}
+	
+	
+	
+}

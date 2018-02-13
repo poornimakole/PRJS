@@ -1,0 +1,54 @@
+package com.psl.dao;
+
+import java.util.List;
+
+import org.springframework.jdbc.core.support.JdbcDaoSupport;
+
+import com.psl.bean.User;
+
+public class UserDAOImpl extends JdbcDaoSupport implements IUserDAO{
+
+	@Override
+	public void createUser(User u) {
+		// TODO Auto-generated method stub
+           String sql="insert into bank values("+u.getAccount_no()+",'"+u.getName()+"',"+u.getAmount()+")";
+		
+		System.out.println(sql);
+		getJdbcTemplate().update(sql);
+	}
+
+	@Override
+	public List<User> miniStatement() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void depositAmount(User u, int amount) {
+		// TODO Auto-generated method stub
+         String sql="insert into transaction values("+u.getAccount_no()+",'"+u.getName()+"',"+u.getAmount()+",'deposit')";
+		
+		System.out.println(sql);
+		getJdbcTemplate().update(sql);
+		
+		sql="update bank set amount=amount"+amount+" where account_no="+u.getAccount_no();
+		System.out.println(sql);
+		getJdbcTemplate().update(sql);
+	}
+
+	@Override
+	public void withdrawAmount(User u, int amount) {
+		// TODO Auto-generated method stub
+		
+		 String sql="insert into transaction values("+u.getAccount_no()+",'"+u.getName()+"',"+u.getAmount()+",'withdraw')";
+			
+			System.out.println(sql);
+			getJdbcTemplate().update(sql);
+			
+			sql="update bank set amount=amount-"+amount+" where account_no="+u.getAccount_no();
+			System.out.println(sql);
+			getJdbcTemplate().update(sql);
+		
+	}
+
+}

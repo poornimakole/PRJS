@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+     function Human(n)
+     {
+         this.name=n;
+     }
+     Human.prototype.speak=function()
+     {
+         alert("I speak English");
+     }
+     Human.prototype.introduction=function()
+     {
+         alert("Hi , I am "+this.name);
+     }
+     
+    Student.prototype=new Human();
+    Student.prototype.constructor=Student;
+
+     function Student(n,s,c)
+     {
+        this.school=s;
+        this.courses=c;
+        Human.call(this,n);
+     }
+     Student.prototype.takeExams=function()
+     {
+         alert("This is exam time");
+     }
+      Human.prototype.introduction=function()
+     {
+         alert("Hi, I am "+this.name+" from "+this.school+" applied for "+this.courses);
+      }
+
+    var student1=new Student("asmi","abc","xyz");
+    student1.introduction();
+    student1.takeExams();
+    student1.speak();
+  </script>   
+</body>
+</html>

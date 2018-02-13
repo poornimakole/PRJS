@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+       /* selecting multiple elements */
+       /* p,div{
+            color:red;
+       } */
+
+       /* decendant selector */
+       /* div p{
+            color:red;
+       } */
+
+        /* child selector */
+       /* ul>li{
+           border:2px solid red;
+       } */
+
+        /* sibling selector */
+       /* ul~div{
+        border:2px solid red; 
+       } */
+
+       /* adjacent sibling selector */
+       /* ul+div{
+        border:2px solid red; 
+       } */
+
+       /* psuedo classes-defines some special state of an element */
+
+       /* div:hover{
+        border:2px solid red; 
+       } */
+
+       /* a:link{
+           color:red;
+       }
+
+        a:hover{
+           color:yellow;
+       }
+       
+       a:visited{
+           color:green;
+       }
+
+        */
+
+       /* p:first-child{
+           color:green;
+       } */
+
+       /* only one of specified type */
+       /* ul:only-of-type{
+           border:2px solid blue;
+       } */
+
+
+         /* psuedo elements-defines some special part of an element */
+
+         /* p::first-letter{
+             color:red;
+             font-size: 30px;
+         } */
+
+         /* p::first-line{
+            color:red;
+             font-size: 30px;  
+         } */
+
+         /* h1::before{
+             content:url("hp1.jpg");
+         } */
+
+         /* h1::after{
+             content:url("hp1.jpg");
+         } */
+
+         ::selection{
+             background-color: yellow;
+         }
+    </style>
+</head>
+<body>
+    <h1>Hello, Smile Please!</h1>
+    <ul id="list1">
+        <li class="a">item 1</li>
+        <li class="a">item 2</li>
+        <li class="b">item 3</li>
+        <li class="b">item 4</li>
+    </ul>
+    
+    <div>
+        This is Div1
+        <br/>
+        <br/>
+        <br/>
+        <p>
+            I am nested p!
+        </p>
+    </div>
+    <p class="a">
+        This is paragraph 1
+        <div>
+            This is Div 2 inside para 1
+        </div>
+    </p>
+    <div>
+    <p id="para1">
+      This is paragraph 2!
+    </p>
+    </div>
+    <p class="b">
+        This is paragraph 3!
+        <p>nested first para</p>
+        <p>nested second para</p>
+    </p>
+    <div>
+        This is Div 3
+    </div>
+    <p>
+        This is another paragraph.
+        <br/>including break tag in between.
+    </p>
+    <p>
+        Last para
+    </p>
+    <a href="https://www.google.com">This is a link</a>
+</body>
+</html>

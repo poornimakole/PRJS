@@ -1,0 +1,27 @@
+package com.psl.q3;
+
+public class BankAccount {
+	 String type;
+	 float balance;
+	 
+	 public BankAccount(int balance,String type) {
+		// TODO Auto-generated constructor stub
+		 
+		 
+	}
+	 void deposit(float amt)
+	 {
+		 
+	 }
+	 void withdraw(float amt)
+	 {
+		 
+	 }
+	 float getBalance()
+	 {
+		 
+		return balance;		 
+	 }
+
+
+}

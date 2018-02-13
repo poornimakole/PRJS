@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script>
+        $(function(){
+          
+            $('#form1').submit(function(event){
+            var userName= $('#username').val();
+            var passWord=$('#password').val();
+            if(userName==""||passWord.length<8)
+            {
+            alert("Username or Password is incorrect");
+            }
+            else
+            {
+                alert("Validation done successfully");
+            }
+            event.preventDefault();
+
+        });
+    })
+       
+    </script>
+</head>
+<body>
+        <form id="form1">
+                   <p>
+                      username
+                      <input id="username"  type="text">
+                   </p>
+                   <p>
+                      password
+                      <input id="password"  type="password"><b></b>
+                   </p>
+                   <p>
+                      <input id="submit" type="submit" value="submit" name="validate"/>
+                   </p>
+             </form>
+</body>
+</html>

@@ -1,0 +1,49 @@
+package com.psl.q1;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Client {
+
+	public static void main(String[] args) {
+		
+		
+		try(BufferedReader br=new BufferedReader(new InputStreamReader(System.in));) {
+			System.out.println("Enter File Path:");
+			String path=br.readLine();
+			System.out.println("Enter File Name:");
+			String file=br.readLine();
+			
+			File f=new File(path+"//"+file);
+			
+			if(f.exists()){
+				System.out.println("File Exists.......!!!");
+			}
+			else
+			{
+				System.out.println("File doesn't exists....!!!");
+				f.createNewFile();
+			}
+			
+			System.out.println("Absolute path of file is : "+f.getAbsolutePath());
+			
+			if(f.canRead() && f.canWrite())
+			{
+				System.out.println("file is readable and writable.");
+			}
+			else
+			{
+				System.out.println("file is not readable and writable.");
+			}
+			
+				
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+	}
+}

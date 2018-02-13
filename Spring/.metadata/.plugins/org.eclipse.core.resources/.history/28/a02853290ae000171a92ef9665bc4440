@@ -1,0 +1,22 @@
+package com.psl.service;
+
+import com.psl.bean.User;
+import com.psl.dao.IUserDAO;
+
+public class UserService {
+  
+	private IUserDAO dao;
+
+	public IUserDAO getDao() {
+		return dao;
+	}
+
+	public void setDao(IUserDAO dao) {
+		this.dao = dao;
+	}
+	
+	public void createUser(User u)
+	{
+		dao.createUser(u);
+	}
+}

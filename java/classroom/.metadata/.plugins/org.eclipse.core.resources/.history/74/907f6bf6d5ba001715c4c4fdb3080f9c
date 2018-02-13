@@ -1,0 +1,29 @@
+package com.psl.q5;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class EmpManagement {
+
+	public EmpManagement() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public void addEmp(int e,String n,String a,String c,int s) 
+	{
+		// TODO Auto-generated method stub
+		 DbConnect db=new DbConnect();
+		 Connection con=db.connectionEstabish();
+		 try {
+			Statement st=con.createStatement();
+			st.execute("insert into empidbi values("+e+",'"+n+"','"+a+"','"+c+"',"+s+")");
+			System.out.println("data inserted.....");
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		 
+		
+	}
+}

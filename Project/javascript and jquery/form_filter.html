@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script>
+        $(function(){
+            //$("form :input").css("border","4px solid blue");
+            //$("form :input:text").css("border","4px solid blue");
+            //$("form :input:text:enabled").css("border","4px solid blue");
+            //$("form :input:text:disabled").css("border","4px solid blue");
+            //$("form :checkbox").before("checked:");
+            //$("form :checkbox:checked").before("checked:");
+        })
+    </script>
+</head>
+<body>
+    <form action="/" method="post">
+        <table class="style1">
+            <tbody>
+                <tr>
+                    <td class="style2">
+                        First Name
+                    </td>
+                    <td>
+                        <input id="FirstName" type="text"/>
+                    </td>
+                </tr>
+                <tr>
+                        <td class="style2">
+                            Last Name
+                        </td>
+                        <td>
+                            <input id="LastName" type="text"/>
+                        </td>
+                </tr>
+                <tr>
+                        <td class="style2">
+                            Disabled Element
+                        </td>
+                        <td>
+                            <input id="Text1" type="text" disabled="disabled"/>
+                        </td>
+                    </tr>
+                    <tr>
+                            <td class="style2">
+                                Gender
+                            </td>
+                            <td>
+                                <input id="Male" type="radio" checked="checked" name="Gender"/>M
+                                <input id="Female" type="radio"  name="Gender"/>F
+                            </td>
+                        </tr>
+                      <tr>
+                                <td class="style2">
+                                    What products are you interested in?
+                                </td>
+                                <td>
+                                    <input id="Checkbox1" type="checkbox" checked="checked" /><label for="Checkbox1">Widgets</label><br/>
+                                    <input id="Checkbox2" type="checkbox"  /><label for="Checkbox1">Hibbity Jibbities</label><br/>
+                                    <input id="Checkbox3" type="checkbox" checked="checked" /><label for="Checkbox1">SplashBangers</label><br/>
+                                    <input id="Checkbox4" type="checkbox"  /><label for="Checkbox1">Whatzits</label>
+                                </td>
+                    </tr>  
+                    <tr>
+                            <td class="style2">
+                               Comments:
+                            </td>
+                            <td>
+                                <textareas id="Comments" colss="40" name="comments"></textareas>
+                            </td>
+                    </tr> 
+                    <tr>
+                            <td class="style2">
+                                Optional life story file
+                            </td>
+                            <td>
+                                <input id="File1" type="file"/>
+                            </td>
+                    </tr>
+                    <tr>
+                            <td class="style2">
+                                &nbsp;
+                            </td>
+                            <td>
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                                <td class="style2">
+                                    &nbsp;
+                                </td>
+                                <td>
+                                    <input id="Submit1" type="submit" value="submit" />
+                                    <input id="Reset1" type="reset"  value="reset"/>
+                                </td>
+                            </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean class="com.psl.bean.Passenger" id="passenger">
+  <constructor-arg name="name" value="vansh"/>
+  <constructor-arg name="source" value="goa"/>
+  <constructor-arg name="destination" value="pune"/>
+  <constructor-arg name="train" ref="train"/>  
+</bean>
+
+<bean class="com.psl.bean.Train" id="train"> 
+  <constructor-arg name="train_no" value="1023"/>
+  <constructor-arg name="train_name" value="rajdhani express"/>
+  <constructor-arg name="ticket_no" value="123"/>
+  <constructor-arg name="ticket_type" value="AC"/>
+
+</bean>
+</beans>

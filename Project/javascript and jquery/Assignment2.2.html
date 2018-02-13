@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       function person()
+       {
+           this.name="sachin";
+           this.city="goa";
+           this.age=42;
+       }
+
+       var per1=new person();
+       for (var key in per1) {
+            if (per1.hasOwnProperty(key)) {
+               document.write(key+" : "+per1[key]+"<br>");
+                
+            }
+        }
+      
+        for (var key in per1) {
+            if (per1.hasOwnProperty(key)) {
+                var element = per1[key];
+                var k=key;
+                delete per1[key];
+                key=element;
+                per1[key]=k;
+              
+            }
+        }
+
+        document.write("After swapping<br>");
+        for (var key in per1) {
+            if (per1.hasOwnProperty(key)) {
+               document.write(key+" : "+per1[key]+"<br>");
+                
+            }
+        }
+      
+    </script>
+</body>
+</html>

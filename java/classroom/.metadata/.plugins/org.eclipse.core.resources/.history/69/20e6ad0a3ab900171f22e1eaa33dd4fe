@@ -1,0 +1,10 @@
+package com.psl.q2;
+
+public class Person {
+
+	int personID;
+	String personName;
+	long personTelephone;
+	
+
+}

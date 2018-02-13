@@ -1,0 +1,21 @@
+package com.psl;
+
+import org.aspectj.lang.ProceedingJoinPoint;
+
+public class TicketCollector {
+	
+//	public void printingPassengerList(){
+//		System.out.println("TC prints passenger list....");
+//	}
+//	
+	public void checkingTicket(ProceedingJoinPoint jp)
+	{
+		System.out.println("TC checks ticket...");
+	}
+	
+//	public void collectingFine()
+//	{
+//		System.out.println("TC collects fine...");
+//	}
+
+}

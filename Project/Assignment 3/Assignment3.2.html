@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <table border="1" id="tb1">
+                <tr>
+                  <td>Firstname</td>
+                  <td>Lastname</td> 
+                  <td>Age</td>
+                </tr>
+                <tr>
+                  <td>Jill</td>
+                  <td>Smith</td> 
+                  <td>24</td>
+                </tr>
+                <tr>
+                  <td>Eve</td>
+                  <td>Jackson</td> 
+                  <td>30</td>
+                </tr>
+                <tr>
+                    <td>Ram</td>
+                    <td>Sharma</td> 
+                    <td>30</td>
+                  </tr>
+              </table>
+</body>
+<script>
+      var t=document.getElementsByTagName("tr");
+        for (var i = 0; i < t.length; i++) {
+              if(i%2==0)
+                t[i].style.backgroundColor="blue";
+              else
+                t[i].style.backgroundColor="green";
+        }
+
+    
+        for (var i = 0; i < t.length; i++)
+         {
+          var d=t[i].getElementsByTagName("td");
+          for (var j = 0; j < d.length; j++) 
+          {  
+            if(i==0)
+            {
+              d[j].style.fontWeight="bold";
+            }
+
+            if(j%2==0)
+                d[j].style.color="red";
+              else
+                d[j].style.color="yellow";
+
+            if(i==t.length-1)
+            {
+              d[j].style.fontStyle="italic";
+            }   
+
+            if(j==0)
+            {
+              d[j].style.textDecoration="underline";
+            } 
+          }
+        }
+</script>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <ul id="myList"><li>Javascript</li><li>jQuery</li><li>AngularJS</li><li>NodeJS</li></ul>
+    <button   onclick="myFunction('1')">Get First Child </button>
+    <button   onclick="myFunction('2')">Get next Sibling</button>
+    <button   onclick="myFunction('3')">Get Last Child </button>
+    <button   onclick="myFunction('4')">Get previous Sibling </button>
+    <button   onclick="myFunction('5')">Get Child Node </button>
+    <button   onclick="myFunction('6')">Get Parent Nade </button>
+
+    <p id="demo"></p>
+    <script>
+        function myFunction(n) {
+            var x;
+            if(n=='1')
+            {
+                 x = document.getElementById("myList").firstChild.innerHTML;
+                 document.getElementById("demo").innerHTML = x;
+            }
+            else if(n=='2')
+            {
+                 x = document.getElementById("myList").firstChild.nextSibling.innerHTML;
+                 document.getElementById("demo").innerHTML = x;
+            }
+            else if(n=='3')
+            {
+                x = document.getElementById("myList").lastChild.innerHTML;
+                document.getElementById("demo").innerHTML =x;
+            }
+            else if(n=='4')
+            {
+                x = document.getElementById("myList").lastChild.previousSibling.innerHTML;
+                document.getElementById("demo").innerHTML = x;
+            }
+            else if(n=='5')
+            {
+                x = document.getElementById("myList").childNodes;
+                var txt = "";
+                for (var i = 0; i < x.length; i++) {
+                    txt = txt + x[i].childNodes[0].nodeValue + "<br>";
+                }
+            
+                document.getElementById("demo").innerHTML = txt;
+            }
+            else if(n=='6')
+            {
+                x = document.getElementById("myList").firstChild.parentNode.nodeName;
+                document.getElementById("demo").innerHTML = x;
+            }
+           
+        }
+    </script>
+</body>
+</html>

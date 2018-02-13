@@ -1,0 +1,11 @@
+package com.psl.q4;
+
+public class Client {
+  
+	public static void main(String[] args) {
+		
+		Storage s=new Storage();
+		new Counter("Thread C",s);
+	}
+	
+}

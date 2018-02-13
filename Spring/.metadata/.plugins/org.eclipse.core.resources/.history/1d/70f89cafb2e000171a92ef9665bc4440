@@ -1,0 +1,15 @@
+package com.psl;
+
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Pointcut;
+
+@Aspect
+public class Suggestion {
+	
+	@Pointcut(value="execution(* com.psl.Order.placeOrder()")
+	public void help()
+	{
+		
+	}
+
+}

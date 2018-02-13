@@ -1,0 +1,40 @@
+package com.psl.service;
+
+import java.util.List;
+
+import com.psl.bean.Transaction;
+import com.psl.bean.User;
+import com.psl.dao.IUserDAO;
+
+public class UserService {
+  
+	private IUserDAO dao;
+
+	public IUserDAO getDao() {
+		return dao;
+	}
+
+	public void setDao(IUserDAO dao) {
+		this.dao = dao;
+	}
+	
+	public void createUser(User u)
+	{
+		dao.createUser(u);
+	}
+	
+	public void deposit(User u)
+	{
+	   dao.depositAmount(u, 10000);
+	}
+	
+	public void withdraw(User u)
+	{
+	  dao.withdrawAmount(u,5000);
+	}
+	
+	public List<Transaction> miniStatement()
+	{
+		return dao.miniStatement();
+	}
+}

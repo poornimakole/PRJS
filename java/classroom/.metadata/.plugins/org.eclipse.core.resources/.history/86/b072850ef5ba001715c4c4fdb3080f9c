@@ -1,0 +1,11 @@
+package com.psl.q4;
+
+import java.util.Date;
+
+public class Person {
+
+	String		Name;
+	String		Address;
+	Date		DateOfBirth;
+
+}

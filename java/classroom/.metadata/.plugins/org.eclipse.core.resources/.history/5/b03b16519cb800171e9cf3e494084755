@@ -1,0 +1,63 @@
+package com.psl.demo;
+
+public class SynchDemo implements Runnable{
+	
+	Account acc;
+	
+	public SynchDemo(Account acc) {
+		// TODO Auto-generated constructor stub
+		this.acc=acc;
+	}
+		
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		for (int i = 0; i < 10; i++) {
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			if (Thread.currentThread().getName().equals("one")) {
+				deposit(10000);
+			} else {
+				withdraw(10000);
+			}
+		}
+	}
+	
+	private void withdraw(int i) {
+		// TODO Auto-generated method stub
+		int ibal=acc.getBalance();
+	    int fbal=ibal-i;
+	    acc.setBalance(fbal);
+	    System.out.println("After withdraw : "+acc.getBalance());
+	}
+
+	private void deposit(int i) {
+		// TODO Auto-generated method stub
+		int ibal=acc.getBalance();
+	    int fbal=ibal+i;
+	    acc.setBalance(fbal);
+	    System.out.println("After deposit : "+acc.getBalance());
+	}
+
+	public static void main(String[] args) {
+		
+		Account acc=new Account(10000);
+		
+		SynchDemo obj=new SynchDemo(acc);
+		
+		Thread t1=new Thread(obj);
+		Thread t2=new Thread(obj);
+		
+		t1.setName("one");
+		t2.setName("two");
+		
+		t1.start();
+		t2.start();
+	}
+
+	
+}

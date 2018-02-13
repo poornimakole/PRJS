@@ -1,0 +1,19 @@
+package com.psl;
+
+public class TicketCollector {
+	
+	public void printingPassengerList(){
+		System.out.println("TC prints passenger list....");
+	}
+	
+	public void checkingTicket()
+	{
+		System.out.println("TC checks ticket...");
+	}
+	
+	public void collectingFine()
+	{
+		System.out.println("TC collects fine...");
+	}
+
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script>
+        $(document).ready(function(){
+
+           // $("p:contains(3)").css("color","red");
+           // $("*:contains(3)").css("color","red");
+           // $("p:parent").css("color","red");
+           //$("p:empty").css("color","red");
+           //$("ul li:nth-child(2)").css("color","red");
+           //$("ul li:nth-child(2n+1)").css("color","red");
+           //$("ul li:last-child").css("color","red");
+           //$("ul li:first-child").css("color","red");
+
+          // $("div:visible").css("color","red");
+           $("#button1").click(function(){
+               $("div:hidden").css("border","2px solid red").show(1000); 
+               $("div:visible").css("border","2px solid red").hide(1000);    
+           })
+        //    $("#button2").click(function(){
+        //        $("div:visible").css("border","2px solid red").hide();   
+        //    })
+
+        })
+    </script>
+</head>
+<body>
+            <ul id="list1">
+                <li class="a">item1</li>
+                <li class="a">item2</li>
+                <li class="b">item3</li>
+                <li class="b">item4</li>
+            </ul>
+        
+            <p id="para1" class="a">This is paragraph1!</p>
+            <p class="b">This is paragraph2!</p>
+            <p id="para3" class="b" lang="en-us">This is paragraph3!</p>
+            <p class="b">This is paragraph4!</p> 
+            <div style="display:none">Div visibilty</div>
+            <button id="button1">Show</button>
+            <!-- <button id="button2">Hide</button>
+</body> -->
+</html>

@@ -1,0 +1,83 @@
+package com.psl.bean;
+
+
+public class Passenger {
+
+	private String name;
+	private String source;
+	private String destination;
+	private Ticket ticket;
+	private Status status;
+	
+	
+	public Passenger() {
+		// TODO Auto-generated constructor stub
+		System.out.println("Passenger Default Constructor");
+	}
+
+
+	public Passenger(String name, String source, String destination,
+			Ticket ticket, Status status) {
+		this.name = name;
+		this.source = source;
+		this.destination = destination;
+		this.ticket = ticket;
+		this.status = status;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getSource() {
+		return source;
+	}
+
+	public void setSource(String source) {
+		this.source = source;
+	}
+
+	public String getDestination() {
+		return destination;
+	}
+
+	public void setDestination(String destination) {
+		this.destination = destination;
+	}
+
+	public Ticket getTicket() {
+		return ticket;
+	}
+
+	public void setTicket(Ticket train) {
+		this.ticket = train;
+	}
+
+	public Status getStatus() {
+		return status;
+	}
+
+
+	public void setStatus(Status status) {
+		this.status = status;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Passenger [name=" + name + ", source=" + source
+				+ ", destination=" + destination + ", ticket=" + ticket
+				+ ", status=" + status + "]";
+	}
+
+
+	
+	
+	
+	
+	
+}

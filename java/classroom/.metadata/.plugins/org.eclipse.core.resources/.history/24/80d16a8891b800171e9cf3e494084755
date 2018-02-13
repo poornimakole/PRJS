@@ -1,0 +1,9 @@
+package com.psl.q3;
+
+public class InvalidAmountException extends Exception {
+
+	public InvalidAmountException(String str) {
+		// TODO Auto-generated constructor stub
+		super(str);
+	}
+}

@@ -1,0 +1,83 @@
+package com.psl.q2;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+
+public class Client {
+	
+	public static void main(String[] args) {
+		
+		int option=0;
+	     DbConnect db=new DbConnect();
+         Connection con=db.connectionEstabish(); 
+         Statement st=null;
+         ResultSet rs=null;
+         BufferedReader br=null;
+		 do {
+			  
+		   br=new BufferedReader(new InputStreamReader(System.in));
+		   try {
+			   System.out.println("\n--------Menu--------");
+			   System.out.println("1. Add Person.");
+			   System.out.println("2. Read orders which are placed.");
+			   System.out.println("3. Search Person.");
+			   System.out.println("4. generate Bill");
+			   System.out.println("5. exit");
+			   System.out.println("Enter option :");
+			    option=Integer.parseInt(br.readLine());
+			    switch(option)
+			    {
+			    case 1:
+			    	System.out.println("Enter Person id:");
+			    	System.out.println("Enter Person name:");
+			    	System.out.println("Enter Person phone number:");
+			    	
+			    	break;
+			    case 2:
+			    	 
+			    	break;
+			    case 3:
+			    	
+			    	  
+			    	break;
+			    case 4:
+			    	break;
+			    case 5:
+			    	System.exit(0);
+			    	default:
+			    		System.out.println("invalid option......!!!");
+			    }
+			
+		} catch (NumberFormatException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		} while (option!=5);
+		 
+		 try {
+			    rs.close();
+		    	st.close();
+				con.close();
+				br.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}

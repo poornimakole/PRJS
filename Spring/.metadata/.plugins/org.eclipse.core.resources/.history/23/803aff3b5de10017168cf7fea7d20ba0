@@ -1,0 +1,26 @@
+package com.psl.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+//http://localhost:8080/SpringMVC/home
+@Controller
+public class EmployeeController {
+	
+	@RequestMapping(value="/home",method=RequestMethod.GET)
+	public String showHomePage(Model model){
+		System.out.println("In Employee Controller .....showHomePage()");
+		model.addAttribute("message","hiiiii");
+		return "home";
+	}
+	
+	@RequestMapping(value="/veda",method=RequestMethod.GET)
+	public String showMPage(Model model){
+		System.out.println("In Employee Controller .....showHomePage()");
+		model.addAttribute("message","hiiiii  veda");
+		return "veda";
+	}
+
+}

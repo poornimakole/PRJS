@@ -1,0 +1,592 @@
+!SESSION 2017-12-15 09:09:21.569 -----------------------------------------------
+eclipse.buildId=4.4.1.M20140925-0400
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+This is a continuation of log file C:\Spring\.metadata\.bak_0.log
+Created Time: 2017-12-15 10:58:58.081
+
+!ENTRY org.eclipse.jface 2 0 2017-12-15 10:58:58.083
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-12-15 10:58:58.083
+!MESSAGE A conflict occurred for CTRL+SHIFT+M:
+Binding(CTRL+SHIFT+M,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.add.import,Add Import,
+		Create import statement on selection,
+		Category(org.eclipse.jdt.ui.category.source,Source,Java Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7fd0a952,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+M,
+	ParameterizedCommand(Command(org.eclipse.jst.jsp.ui.add.imports,Add Im&port,
+		Create import declaration for selection,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1738d3b2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jst.jsp.ui.structured.text.editor.jsp.scope,,,system)
+
+!ENTRY org.eclipse.core.net 1 0 2017-12-15 10:59:10.222
+!MESSAGE System property http.proxyHost is set to gaproxy.persistent.co.in but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2017-12-15 10:59:10.229
+!MESSAGE System property http.proxyPort is set to 8080 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2017-12-15 10:59:10.234
+!MESSAGE System property https.proxyHost is set to gaproxy.persistent.co.in but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2017-12-15 10:59:10.240
+!MESSAGE System property https.proxyPort is set to 8080 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2017-12-15 11:07:38.589
+!MESSAGE System property http.proxyHost is set to gaproxy.persistent.co.in but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2017-12-15 11:07:38.592
+!MESSAGE System property http.proxyPort is set to 8080 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2017-12-15 11:07:38.595
+!MESSAGE System property https.proxyHost is set to gaproxy.persistent.co.in but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2017-12-15 11:07:38.599
+!MESSAGE System property https.proxyPort is set to 8080 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2017-12-15 11:07:38.603
+!MESSAGE System property http.proxyHost is set to gaproxy.persistent.co.in but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2017-12-15 11:07:38.607
+!MESSAGE System property http.proxyPort is set to 8080 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2017-12-15 11:07:38.610
+!MESSAGE System property https.proxyHost is set to gaproxy.persistent.co.in but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2017-12-15 11:07:38.613
+!MESSAGE System property https.proxyPort is set to 8080 but should not be set.
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2017-12-15 11:07:38.617
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: java.io.IOException: Unable to tunnel through proxy. Proxy returns "HTTP/1.1 407 Proxy Authentication Required"
+	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:928)
+	at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1039)
+	at org.eclipse.jdt.internal.core.BinaryMethod.getAttachedJavadoc(BinaryMethod.java:717)
+	at org.eclipse.jdt.internal.core.ResolvedBinaryMethod.getAttachedJavadoc(ResolvedBinaryMethod.java:1)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:500)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:689)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:607)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:599)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:129)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:85)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+Caused by: java.io.IOException: Unable to tunnel through proxy. Proxy returns "HTTP/1.1 407 Proxy Authentication Required"
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.net.www.protocol.http.HttpURLConnection.getChainedException(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(Unknown Source)
+	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:862)
+	... 11 more
+Caused by: java.io.IOException: Unable to tunnel through proxy. Proxy returns "HTTP/1.1 407 Proxy Authentication Required"
+	at sun.net.www.protocol.http.HttpURLConnection.doTunneling(Unknown Source)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at java.net.HttpURLConnection.getResponseCode(Unknown Source)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(Unknown Source)
+	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:848)
+	... 11 more
+Caused by: java.io.IOException: Unable to tunnel through proxy. Proxy returns "HTTP/1.1 407 Proxy Authentication Required"
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.net.www.protocol.http.HttpURLConnection.getChainedException(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(Unknown Source)
+	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:862)
+	at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1039)
+	at org.eclipse.jdt.internal.core.BinaryMethod.getAttachedJavadoc(BinaryMethod.java:717)
+	at org.eclipse.jdt.internal.core.ResolvedBinaryMethod.getAttachedJavadoc(ResolvedBinaryMethod.java:1)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:500)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:689)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:607)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:599)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:129)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:85)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+Caused by: java.io.IOException: Unable to tunnel through proxy. Proxy returns "HTTP/1.1 407 Proxy Authentication Required"
+	at sun.net.www.protocol.http.HttpURLConnection.doTunneling(Unknown Source)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at java.net.HttpURLConnection.getResponseCode(Unknown Source)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(Unknown Source)
+	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:848)
+	... 11 more
+!SUBENTRY 1 org.eclipse.jdt.core 4 985 2017-12-15 11:07:38.618
+!MESSAGE Unable to tunnel through proxy. Proxy returns "HTTP/1.1 407 Proxy Authentication Required"
+!STACK 0
+java.io.IOException: Unable to tunnel through proxy. Proxy returns "HTTP/1.1 407 Proxy Authentication Required"
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.net.www.protocol.http.HttpURLConnection.getChainedException(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(Unknown Source)
+	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:862)
+	at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1039)
+	at org.eclipse.jdt.internal.core.BinaryMethod.getAttachedJavadoc(BinaryMethod.java:717)
+	at org.eclipse.jdt.internal.core.ResolvedBinaryMethod.getAttachedJavadoc(ResolvedBinaryMethod.java:1)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:500)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:689)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:607)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:599)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:129)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:85)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+Caused by: java.io.IOException: Unable to tunnel through proxy. Proxy returns "HTTP/1.1 407 Proxy Authentication Required"
+	at sun.net.www.protocol.http.HttpURLConnection.doTunneling(Unknown Source)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at java.net.HttpURLConnection.getResponseCode(Unknown Source)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(Unknown Source)
+	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:848)
+	... 11 more
+
+!ENTRY org.eclipse.core.net 1 0 2017-12-15 11:35:59.488
+!MESSAGE System property http.proxyHost is set to gaproxy.persistent.co.in but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2017-12-15 11:35:59.495
+!MESSAGE System property http.proxyPort is set to 8080 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2017-12-15 11:35:59.501
+!MESSAGE System property https.proxyHost is set to gaproxy.persistent.co.in but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2017-12-15 11:35:59.509
+!MESSAGE System property https.proxyPort is set to 8080 but should not be set.
+
+!ENTRY org.eclipse.jdt.core 4 969 2017-12-15 11:41:57.364
+!MESSAGE showEmpPage(Model, String) [in EmployeeController [in [Working copy] EmployeeController.java [in com.psl.controller [in src [in SpringMVC]]]]] does not exist
+
+!ENTRY org.eclipse.core.net 1 0 2017-12-15 13:52:36.291
+!MESSAGE System property http.proxyHost is set to gaproxy.persistent.co.in but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2017-12-15 13:52:36.296
+!MESSAGE System property http.proxyPort is set to 8080 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2017-12-15 13:52:36.300
+!MESSAGE System property https.proxyHost is set to gaproxy.persistent.co.in but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2017-12-15 13:52:36.303
+!MESSAGE System property https.proxyPort is set to 8080 but should not be set.
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2017-12-15 13:52:36.308
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: java.io.IOException: Unable to tunnel through proxy. Proxy returns "HTTP/1.1 407 Proxy Authentication Required"
+	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:928)
+	at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1039)
+	at org.eclipse.jdt.internal.core.BinaryMethod.getAttachedJavadoc(BinaryMethod.java:717)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:500)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:93)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:77)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:62)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:575)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.IOException: Unable to tunnel through proxy. Proxy returns "HTTP/1.1 407 Proxy Authentication Required"
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.net.www.protocol.http.HttpURLConnection.getChainedException(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(Unknown Source)
+	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:862)
+	... 9 more
+Caused by: java.io.IOException: Unable to tunnel through proxy. Proxy returns "HTTP/1.1 407 Proxy Authentication Required"
+	at sun.net.www.protocol.http.HttpURLConnection.doTunneling(Unknown Source)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at java.net.HttpURLConnection.getResponseCode(Unknown Source)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(Unknown Source)
+	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:848)
+	... 9 more
+Caused by: java.io.IOException: Unable to tunnel through proxy. Proxy returns "HTTP/1.1 407 Proxy Authentication Required"
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.net.www.protocol.http.HttpURLConnection.getChainedException(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(Unknown Source)
+	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:862)
+	at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1039)
+	at org.eclipse.jdt.internal.core.BinaryMethod.getAttachedJavadoc(BinaryMethod.java:717)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:500)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:93)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:77)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:62)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:575)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.IOException: Unable to tunnel through proxy. Proxy returns "HTTP/1.1 407 Proxy Authentication Required"
+	at sun.net.www.protocol.http.HttpURLConnection.doTunneling(Unknown Source)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at java.net.HttpURLConnection.getResponseCode(Unknown Source)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(Unknown Source)
+	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:848)
+	... 9 more
+!SUBENTRY 1 org.eclipse.jdt.core 4 985 2017-12-15 13:52:36.309
+!MESSAGE Unable to tunnel through proxy. Proxy returns "HTTP/1.1 407 Proxy Authentication Required"
+!STACK 0
+java.io.IOException: Unable to tunnel through proxy. Proxy returns "HTTP/1.1 407 Proxy Authentication Required"
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.net.www.protocol.http.HttpURLConnection.getChainedException(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(Unknown Source)
+	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:862)
+	at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1039)
+	at org.eclipse.jdt.internal.core.BinaryMethod.getAttachedJavadoc(BinaryMethod.java:717)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:500)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:93)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:77)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:62)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:575)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.IOException: Unable to tunnel through proxy. Proxy returns "HTTP/1.1 407 Proxy Authentication Required"
+	at sun.net.www.protocol.http.HttpURLConnection.doTunneling(Unknown Source)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at java.net.HttpURLConnection.getResponseCode(Unknown Source)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(Unknown Source)
+	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:848)
+	... 9 more
+
+!ENTRY org.springframework.ide.eclipse.boot 4 0 2017-12-15 13:54:53.610
+!MESSAGE com.psl.beans [in src [in SpringMVC]] does not exist
+!STACK 1
+Java Model Exception: Java Model Status [com.psl.beans [in src [in SpringMVC]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:566)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:247)
+	at org.eclipse.jdt.internal.core.Openable.openAncestors(Openable.java:505)
+	at org.eclipse.jdt.internal.core.CompilationUnit.openAncestors(CompilationUnit.java:1173)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:241)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:579)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:316)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:302)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:257)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildrenOfType(JavaElement.java:271)
+	at org.eclipse.jdt.internal.core.CompilationUnit.getTypes(CompilationUnit.java:920)
+	at org.eclipse.jdt.internal.core.CompilationUnit.getAllTypes(CompilationUnit.java:605)
+	at org.springframework.ide.eclipse.boot.validation.MissingConfigurationProcessorRule$ValidationVisitor.visit(MissingConfigurationProcessorRule.java:130)
+	at org.springframework.ide.eclipse.boot.validation.MissingConfigurationProcessorRule.validate(MissingConfigurationProcessorRule.java:200)
+	at org.springframework.ide.eclipse.boot.validation.MissingConfigurationProcessorRule.validate(MissingConfigurationProcessorRule.java:1)
+	at org.springframework.ide.eclipse.core.model.validation.AbstractValidator$ValidationVisitor.visit(AbstractValidator.java:280)
+	at org.springframework.ide.eclipse.core.model.AbstractModelElement.accept(AbstractModelElement.java:131)
+	at org.springframework.ide.eclipse.core.model.validation.AbstractValidator.validate(AbstractValidator.java:142)
+	at org.springframework.ide.eclipse.core.model.validation.AbstractValidator.validate(AbstractValidator.java:104)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager$7.execute(SpringProjectContributionManager.java:260)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager$9.run(SpringProjectContributionManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.execute(SpringProjectContributionManager.java:294)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.runValidator(SpringProjectContributionManager.java:257)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.build(SpringProjectContributionManager.java:131)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:734)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:302)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:358)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:381)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2017-12-15 13:54:53.610
+!MESSAGE com.psl.beans [in src [in SpringMVC]] does not exist
+
+!ENTRY org.eclipse.core.net 1 0 2017-12-15 14:59:34.303
+!MESSAGE System property http.proxyHost is set to gaproxy.persistent.co.in but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2017-12-15 14:59:34.309
+!MESSAGE System property http.proxyPort is set to 8080 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2017-12-15 14:59:34.321
+!MESSAGE System property https.proxyHost is set to gaproxy.persistent.co.in but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2017-12-15 14:59:34.326
+!MESSAGE System property https.proxyPort is set to 8080 but should not be set.
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2017-12-15 14:59:34.332
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: java.io.IOException: Unable to tunnel through proxy. Proxy returns "HTTP/1.1 407 Proxy Authentication Required"
+	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:928)
+	at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1039)
+	at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:997)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:500)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:93)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:77)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:62)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:575)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.IOException: Unable to tunnel through proxy. Proxy returns "HTTP/1.1 407 Proxy Authentication Required"
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.net.www.protocol.http.HttpURLConnection.getChainedException(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(Unknown Source)
+	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:862)
+	... 9 more
+Caused by: java.io.IOException: Unable to tunnel through proxy. Proxy returns "HTTP/1.1 407 Proxy Authentication Required"
+	at sun.net.www.protocol.http.HttpURLConnection.doTunneling(Unknown Source)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at java.net.HttpURLConnection.getResponseCode(Unknown Source)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(Unknown Source)
+	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:848)
+	... 9 more
+Caused by: java.io.IOException: Unable to tunnel through proxy. Proxy returns "HTTP/1.1 407 Proxy Authentication Required"
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.net.www.protocol.http.HttpURLConnection.getChainedException(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(Unknown Source)
+	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:862)
+	at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1039)
+	at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:997)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:500)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:93)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:77)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:62)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:575)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.IOException: Unable to tunnel through proxy. Proxy returns "HTTP/1.1 407 Proxy Authentication Required"
+	at sun.net.www.protocol.http.HttpURLConnection.doTunneling(Unknown Source)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at java.net.HttpURLConnection.getResponseCode(Unknown Source)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(Unknown Source)
+	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:848)
+	... 9 more
+!SUBENTRY 1 org.eclipse.jdt.core 4 985 2017-12-15 14:59:34.334
+!MESSAGE Unable to tunnel through proxy. Proxy returns "HTTP/1.1 407 Proxy Authentication Required"
+!STACK 0
+java.io.IOException: Unable to tunnel through proxy. Proxy returns "HTTP/1.1 407 Proxy Authentication Required"
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.net.www.protocol.http.HttpURLConnection.getChainedException(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(Unknown Source)
+	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:862)
+	at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1039)
+	at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:997)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:500)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:93)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:77)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:62)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:575)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.IOException: Unable to tunnel through proxy. Proxy returns "HTTP/1.1 407 Proxy Authentication Required"
+	at sun.net.www.protocol.http.HttpURLConnection.doTunneling(Unknown Source)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at java.net.HttpURLConnection.getResponseCode(Unknown Source)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(Unknown Source)
+	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:848)
+	... 9 more
+
+!ENTRY org.eclipse.core.net 1 0 2017-12-15 15:05:26.399
+!MESSAGE System property http.proxyHost is set to gaproxy.persistent.co.in but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2017-12-15 15:05:26.431
+!MESSAGE System property http.proxyPort is set to 8080 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2017-12-15 15:05:26.436
+!MESSAGE System property https.proxyHost is set to gaproxy.persistent.co.in but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2017-12-15 15:05:26.441
+!MESSAGE System property https.proxyPort is set to 8080 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2017-12-15 15:05:29.551
+!MESSAGE System property http.proxyHost is set to gaproxy.persistent.co.in but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2017-12-15 15:05:29.559
+!MESSAGE System property http.proxyPort is set to 8080 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2017-12-15 15:05:29.568
+!MESSAGE System property https.proxyHost is set to gaproxy.persistent.co.in but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2017-12-15 15:05:29.577
+!MESSAGE System property https.proxyPort is set to 8080 but should not be set.
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2017-12-15 15:05:29.586
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: java.io.IOException: Unable to tunnel through proxy. Proxy returns "HTTP/1.1 407 Proxy Authentication Required"
+	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:928)
+	at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1039)
+	at org.eclipse.jdt.internal.core.BinaryMethod.getAttachedJavadoc(BinaryMethod.java:717)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:500)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:93)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:77)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:62)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:575)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.IOException: Unable to tunnel through proxy. Proxy returns "HTTP/1.1 407 Proxy Authentication Required"
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.net.www.protocol.http.HttpURLConnection.getChainedException(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(Unknown Source)
+	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:862)
+	... 9 more
+Caused by: java.io.IOException: Unable to tunnel through proxy. Proxy returns "HTTP/1.1 407 Proxy Authentication Required"
+	at sun.net.www.protocol.http.HttpURLConnection.doTunneling(Unknown Source)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at java.net.HttpURLConnection.getResponseCode(Unknown Source)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(Unknown Source)
+	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:848)
+	... 9 more
+Caused by: java.io.IOException: Unable to tunnel through proxy. Proxy returns "HTTP/1.1 407 Proxy Authentication Required"
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.net.www.protocol.http.HttpURLConnection.getChainedException(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(Unknown Source)
+	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:862)
+	at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1039)
+	at org.eclipse.jdt.internal.core.BinaryMethod.getAttachedJavadoc(BinaryMethod.java:717)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:500)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:93)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:77)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:62)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:575)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.IOException: Unable to tunnel through proxy. Proxy returns "HTTP/1.1 407 Proxy Authentication Required"
+	at sun.net.www.protocol.http.HttpURLConnection.doTunneling(Unknown Source)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at java.net.HttpURLConnection.getResponseCode(Unknown Source)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(Unknown Source)
+	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:848)
+	... 9 more
+!SUBENTRY 1 org.eclipse.jdt.core 4 985 2017-12-15 15:05:29.586
+!MESSAGE Unable to tunnel through proxy. Proxy returns "HTTP/1.1 407 Proxy Authentication Required"
+!STACK 0
+java.io.IOException: Unable to tunnel through proxy. Proxy returns "HTTP/1.1 407 Proxy Authentication Required"
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.net.www.protocol.http.HttpURLConnection.getChainedException(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(Unknown Source)
+	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:862)
+	at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1039)
+	at org.eclipse.jdt.internal.core.BinaryMethod.getAttachedJavadoc(BinaryMethod.java:717)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:500)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:93)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:77)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:62)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:575)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.IOException: Unable to tunnel through proxy. Proxy returns "HTTP/1.1 407 Proxy Authentication Required"
+	at sun.net.www.protocol.http.HttpURLConnection.doTunneling(Unknown Source)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at java.net.HttpURLConnection.getResponseCode(Unknown Source)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(Unknown Source)
+	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:848)
+	... 9 more

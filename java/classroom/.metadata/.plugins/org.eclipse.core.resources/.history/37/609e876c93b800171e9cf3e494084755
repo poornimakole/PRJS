@@ -1,0 +1,5 @@
+package com.psl.q3;
+
+public class LowBalanceException extends Exception {
+
+}

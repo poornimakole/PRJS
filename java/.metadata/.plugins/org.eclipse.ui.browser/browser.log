@@ -1,0 +1,56 @@
+
+Nov 09, 2017 11:14:53.34 NEW SESSION
+Nov 09, 2017 11:14:53.34 [TmFFExt2] observe.profile-after-change
+Nov 09, 2017 11:14:53.35 [TmFFExt2] observe.http-on-modify-request: TmFFExt2 is initialized
+Nov 09, 2017 11:14:53.46 [TmFFExt2] observe.toplevel-window-ready: readConfig
+Nov 09, 2017 12:12:36.30 [TmFFExt2] observe.toplevel-window-ready: readConfig
+Nov 09, 2017 13:44:31.55 [TmFFExt2] observe.quit-application
+Nov 09, 2017 13:44:31.71 TypeError: this._toolboxes is undefined: @resource:///modules/devtools/gDevTools.jsm:192
+Nov 09, 2017 13:44:31.72 @resource:///modules/devtools/EventEmitter.jsm:56
+Nov 09, 2017 13:44:31.72 EventEmitter_emit@resource:///modules/devtools/EventEmitter.jsm:100
+Nov 09, 2017 13:44:31.73 @resource://gre/modules/devtools/Toolbox.jsm:668
+Nov 09, 2017 13:44:31.73 effort@resource://gre/modules/commonjs/promise/core.js:53
+Nov 09, 2017 13:44:31.74 resolveDeferred@resource://gre/modules/commonjs/promise/core.js:125
+Nov 09, 2017 13:44:31.75 then@resource://gre/modules/commonjs/promise/core.js:34
+Nov 09, 2017 13:44:31.75 resolve@resource://gre/modules/commonjs/promise/core.js:167
+Nov 09, 2017 13:44:31.76 resolveDeferred@resource://gre/modules/commonjs/promise/core.js:125
+Nov 09, 2017 13:44:31.77 effort@resource://gre/modules/commonjs/promise/core.js:53
+Nov 09, 2017 13:44:31.77 resolveDeferred@resource://gre/modules/commonjs/promise/core.js:125
+Nov 09, 2017 13:44:31.78 then@resource://gre/modules/commonjs/promise/core.js:34
+Nov 09, 2017 13:44:31.79 then@resource://gre/modules/commonjs/promise/core.js:138
+Nov 09, 2017 13:44:31.79 resolve@resource://gre/modules/commonjs/promise/core.js:167
+Nov 09, 2017 13:44:31.80 resolveDeferred@resource://gre/modules/commonjs/promise/core.js:125
+Nov 09, 2017 13:44:31.81 effort@resource://gre/modules/commonjs/promise/core.js:53
+Nov 09, 2017 13:44:31.82 resolveDeferred@resource://gre/modules/commonjs/promise/core.js:125
+Nov 09, 2017 13:44:31.82 then@resource://gre/modules/commonjs/promise/core.js:34
+Nov 09, 2017 13:44:31.83 then@resource://gre/modules/commonjs/promise/core.js:138
+Nov 09, 2017 13:44:31.84 resolve@resource://gre/modules/commonjs/promise/core.js:167
+Nov 09, 2017 13:44:31.84 resolveDeferred@resource://gre/modules/commonjs/promise/core.js:125
+Nov 09, 2017 13:44:31.85 effort@resource://gre/modules/commonjs/promise/core.js:53
+Nov 09, 2017 13:44:31.87 resolveDeferred@resource://gre/modules/commonjs/promise/core.js:125
+Nov 09, 2017 13:44:31.87 then@resource://gre/modules/commonjs/promise/core.js:34
+Nov 09, 2017 13:44:31.87 resolve@resource://gre/modules/commonjs/promise/core.js:167
+Nov 09, 2017 13:44:31.88 resolveDeferred@resource://gre/modules/commonjs/promise/core.js:125
+Nov 09, 2017 13:44:31.88 effort@resource://gre/modules/commonjs/promise/core.js:53
+Nov 09, 2017 13:44:31.89 resolveDeferred@resource://gre/modules/commonjs/promise/core.js:125
+Nov 09, 2017 13:44:31.89 then@resource://gre/modules/commonjs/promise/core.js:34
+Nov 09, 2017 13:44:31.89 resolve@resource://gre/modules/commonjs/promise/core.js:167
+Nov 09, 2017 13:44:31.90 _onWebConsoleClose@resource://gre/modules/WebConsolePanel.jsm:84
+Nov 09, 2017 13:44:31.90 @resource://gre/modules/HUDService.jsm:142
+Nov 09, 2017 13:44:31.91 WC_onDestroyUI@resource://gre/modules/HUDService.jsm:581
+Nov 09, 2017 13:44:31.92 WCCP_disconnect/onDisconnect@chrome://browser/content/devtools/webconsole.js:4451
+Nov 09, 2017 13:44:31.92 @resource://gre/modules/devtools/dbg-client.jsm:247
+Nov 09, 2017 13:44:31.93 @resource://gre/modules/devtools/dbg-client.jsm:88
+Nov 09, 2017 13:44:31.94 EV_notify@resource://gre/modules/devtools/dbg-client.jsm:145
+Nov 09, 2017 13:44:31.94 DC_onClosed@resource://gre/modules/devtools/dbg-client.jsm:512
+Nov 09, 2017 13:44:31.94 LDT_close@chrome://global/content/devtools/dbg-transport.js:231
+Nov 09, 2017 13:44:31.95 LDT_close@chrome://global/content/devtools/dbg-transport.js:229
+Nov 09, 2017 13:44:31.95 LDT_close@chrome://global/content/devtools/dbg-transport.js:229
+Nov 09, 2017 13:44:31.95 _closeTransport@resource://gre/modules/devtools/dbg-client.jsm:252
+Nov 09, 2017 13:44:31.96 @resource://gre/modules/devtools/dbg-client.jsm:549
+Nov 09, 2017 13:44:31.96 DC_onPacket@resource://gre/modules/devtools/dbg-client.jsm:494
+Nov 09, 2017 13:44:31.96 @chrome://global/content/devtools/dbg-transport.js:212
+Nov 09, 2017 13:44:31.97 
+Nov 09, 2017 13:44:42.63 [TmFFExt2] observe.profile-after-change
+Nov 09, 2017 13:44:42.63 [TmFFExt2] observe.http-on-modify-request: TmFFExt2 is initialized
+Nov 09, 2017 13:44:42.69 [TmFFExt2] observe.toplevel-window-ready: readConfig

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            //different types of selector
+            // $("#list1").css("color","red");
+            // $(".b").css("border","2px solid blue");
+            // $("p").css("color","green");
+            // $("*").css("fontSize","20px");
+
+
+            //selecting precise element
+             // $("li.a").css("border","2px solid yellow");
+
+             //selecting muliple element
+             // $("p,li.b").css("border","2px solid red");
+
+             //descendent element
+             //  $("ul li.b").css("border","2px solid red");
+            
+             //p preceded by ul
+             //$("ul+p").css("border","2px solid red");
+             //$("li+li").css("border","2px solid red");
+
+             //all sibling selector preceded by ul
+             //$("ul~p").css("border","2px solid red");
+
+            $("#para3").css("color", "red").css("border","2px solid blue");
+
+        })
+    </script>
+</head>
+<body>
+  <p class="a">This is paragraph1!</p>
+    <ul id="list1">
+        <li class="a">item1</li>
+        <li class="a">item2</li>
+        <li class="b">item3</li>
+        <li class="b">item4</li>
+    </ul>
+
+    <p class="a">This is paragraph1!</p>
+    <p class="b">This is paragraph2!</p>
+    <p id="para3" class="b">This is paragraph3!</p>
+    <p class="b">This is paragraph4!</p>
+
+</body>
+</html>

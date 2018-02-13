@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+Enter the limit to calculate the odd numbers starting from 1:<input type="number" id="num"><br>
+   <input type="button" value="start" onclick="Start()"> 
+   <input type="button" value="stop" onclick="Stop()"> 
+   <ul id="result"></ul>
+   <script>
+       function Start(){
+                var worker=new Worker('oddNum.js');
+                worker.postMessage(document.getElementById("num").val);
+               console.log(document.getElementById("num").nodeValue);
+                worker.onmessage=function(event){
+                   alert(event.data);
+                     }
+            }
+            
+
+             function Stop(){
+                
+             } 
+   </script>
+</body>
+</html>

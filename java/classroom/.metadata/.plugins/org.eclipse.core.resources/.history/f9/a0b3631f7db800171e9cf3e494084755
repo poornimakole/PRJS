@@ -1,0 +1,14 @@
+package com.psl.q2;
+
+public class MyCustomException extends Exception {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+    
+	public MyCustomException() {
+		// TODO Auto-generated constructor stub
+		super("Invalid entry....");
+	}
+}

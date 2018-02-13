@@ -1,0 +1,15 @@
+package com.psl.q2;
+
+public class TechnicalManager {
+
+	int noOfEmployeeReporting;
+	String workPlace;
+	int promotionsTillDate;
+	int noOfProjects;
+	
+	public TechnicalManager() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public TechnicalManager(int noOfEmployeeReporting,String )
+}

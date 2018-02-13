@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+  Enter User Name<input type="text" id="name"/>
+  <input type="button" id="btn" value="Click Me">
+  <script type="text/javascript">
+  
+  $("#btn").click(function(){
+	  var n=document.getElementById("name").value;
+	  localStorage.setItem('name',n);
+	  
+	 
+  })
+  
+  </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+package com.psl.q2;
+
+public class TechnicalManager {
+
+	int noOfEmployeeReporting;
+	String workPlace;
+	int promotionsTillDate;
+	int noOfProjects;
+	
+	public TechnicalManager() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public TechnicalManager(int noOfEmployeeReporting,String workPlace,int promotionsTillDate,int noOfProjects)
+	{
+		// TODO Auto-generated constructor stub
+		this.noOfEmployeeReporting = noOfEmployeeReporting;
+		this.workPlace = workPlace;
+		this.promotionsTillDate = promotionsTillDate;
+		this.noOfProjects = noOfProjects;
+	}
+
+	public int getNoOfEmployeeReporting() {
+		return noOfEmployeeReporting;
+	}
+
+	public void setNoOfEmployeeReporting(int noOfEmployeeReporting) {
+		this.noOfEmployeeReporting = noOfEmployeeReporting;
+	}
+
+	public String getWorkPlace() {
+		return workPlace;
+	}
+
+	public void setWorkPlace(String workPlace) {
+		this.workPlace = workPlace;
+	}
+
+	public int getPromotionsTillDate() {
+		return promotionsTillDate;
+	}
+
+	public void setPromotionsTillDate(int promotionsTillDate) {
+		this.promotionsTillDate = promotionsTillDate;
+	}
+
+	public int getNoOfProjects() {
+		return noOfProjects;
+	}
+
+	public void setNoOfProjects(int noOfProjects) {
+		this.noOfProjects = noOfProjects;
+	}
+	
+	
+}

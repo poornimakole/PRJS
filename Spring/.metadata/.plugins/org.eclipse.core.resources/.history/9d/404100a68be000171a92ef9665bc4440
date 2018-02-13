@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd">
+
+	<bean class="com.psl.Performer" id="performer"/>
+	<bean class="com.psl.Audiance" id="audiance"/>
+	
+	
+	<aop:config>
+	  <aop:aspect ref="audiance">
+	     <aop:before method="takeSeats"   pointcut="execution(* com.psl.Performer.perform(..))"/>
+	     <aop:before method="switchOffPhones"   pointcut="execution(* com.psl.Performer.perform(..))"/>
+	     <aop:after method="goHome"   pointcut="execution(* com.psl.Performer.perform(..))"/>
+	     <aop:after-returning method="applaud"  pointcut="execution(* com.psl.Performer.perform(..))"/>
+	    <aop:after-throwing method="demandRefund"  pointcut="execution(* com.psl.Performer.perform(..))"/>
+	  </aop:aspect>
+	</aop:config>
+</beans>

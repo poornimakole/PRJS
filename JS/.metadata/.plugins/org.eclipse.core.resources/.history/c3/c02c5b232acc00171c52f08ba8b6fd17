@@ -1,0 +1,7 @@
+self.onmessage=function(event){
+    window.log(event.data);
+}
+for (var i = parseInt(limit); i >0; i--) {   
+    if(i%2!=0)
+    postMessage(i);
+}

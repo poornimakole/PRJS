@@ -1,0 +1,521 @@
+package com.psl.q3;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+import java.util.StringTokenizer;
+import java.util.TreeSet;
+
+public class Client {
+
+	private  void addContact(Contact c, List<Contact> cList) {
+		// TODO Auto-generated method stub
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		
+		try {
+
+			System.out.print("Enter Contact ID: ");
+			c.setContactID(Integer.parseInt(br.readLine()));
+			
+			System.out.println("Enter Contact Name: ");
+			c.setContactName(br.readLine());
+			
+			System.out.println("Enter email id: ");
+			c.setEmailAddress(br.readLine());
+			
+			System.out.println("Enter no. of contact numbers");
+			int n=Integer.parseInt(br.readLine());
+			
+			List<String> cNum=new ArrayList<String>();
+			for (int i = 0; i < n; i++) {
+				System.out.println("Enter number :");
+				cNum.add(br.readLine());
+			}
+			 c.setContactNumber(cNum);
+			  cList.add(c);
+		} catch (NumberFormatException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
+	}
+	
+	
+	private void removeContact(Contact c, List<Contact> cList) throws ContactNotFoundException {
+		// TODO Auto-generated method stub
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		boolean flag=false;
+	     try {
+	    	 System.out.print("Enter Contact ID: ");
+			int id=Integer.parseInt(br.readLine());
+			Iterator<Contact> itr=cList.iterator();
+			while(itr.hasNext())				
+			{
+               c=itr.next();
+               if(c.getContactID()==id)
+               {
+            	   itr.remove();
+            	   flag=true;
+            	   break;
+               }
+			}
+			 if(!flag)
+			 {
+				 throw new ContactNotFoundException();
+			 }
+		} catch (NumberFormatException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	private Contact searchContactByName(String name, List<Contact> contact) throws ContactNotFoundException
+	{
+		boolean flag=false;
+		Contact c=null;
+	     try {
+			Iterator<Contact> itr=contact.iterator();
+			while(itr.hasNext())				
+			{
+             c=itr.next();
+              if(c.getContactName().equals(name))
+              {
+           	   flag=true;
+           	   break;
+              }
+			}
+			 if(!flag)
+			 {
+				 throw new ContactNotFoundException();
+			 }
+		} catch (NumberFormatException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+		return c;
+		
+	}
+	
+	
+	List<Contact> SearchContactByNumber(String number, List<Contact> contact) throws ContactNotFoundException
+	{
+		 List<Contact> cc=new ArrayList<Contact>();
+		 List<String> cont=new ArrayList<String>();
+			boolean flag=false;
+			Contact c=null;
+		     try {
+				Iterator<Contact> itr=contact.iterator();
+				while(itr.hasNext())				
+				{
+	             c=itr.next();
+	             cont=c.getContactNumber();
+	             Iterator<String> itr1=cont.iterator();
+	             flag=false;
+	             while(itr1.hasNext())
+		          { 
+	            	 if(itr1.next().equals(number))
+		              {
+		           	   flag=true;
+		           	   cc.add(c);
+		           	   break;
+		              }
+					}
+	             if(flag)
+				 {
+					 break;
+				 }
+				}
+				if(!flag)
+				 {
+					 throw new ContactNotFoundException();
+				 }
+				
+			} catch (NumberFormatException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} 
+			
+		return cc;
+		
+	}
+	
+	
+	private void addContactNumber(int contactId, String contactNo, List<Contact> contacts)
+	{
+		boolean flag=false;
+		Contact c=null;
+	     try {
+			Iterator<Contact> itr=contacts.iterator();
+			while(itr.hasNext())				
+			{
+             c=itr.next();
+              if(c.getContactID()==contactId)
+              {
+            	  List<String> cont=c.getContactNumber();
+            	   cont.add(contactNo);
+            	   c.setContactNumber(cont);
+            	   flag=true;
+           	   break;
+              }
+			}
+			 if(!flag)
+			 {
+				 System.out.println("contact id not found...!!!");
+			 }
+		} catch (NumberFormatException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+	}
+	
+	
+	
+	void sortContactsByName(List<Contact> contacts)
+	{
+		System.out.println("Before sort:");
+		System.out.println(contacts);
+		Collections.sort(contacts,new Comparator<Contact>() {
+			public int compare(Contact o1, Contact o2) {
+				return o1.getContactName().compareTo(o2.getContactName());
+				
+			};
+		});
+		System.out.println("After sort:");
+		System.out.println(contacts);
+	}
+	
+	void readContactsFromFile(List<Contact> contacts, String fileName)
+	{
+         Contact c=null;
+		 File f=new File(fileName);
+	      try (
+				FileInputStream fis=new FileInputStream(f);
+				BufferedReader br=new BufferedReader(new InputStreamReader(fis));
+			)
+			{
+	    	  String data=null;
+			  while((data=br.readLine())!=null)
+			  {
+				  c=new Contact();
+				  StringTokenizer st=new StringTokenizer(data,",");
+				  c.setContactID(Integer.parseInt(st.nextToken()));
+				  c.setContactName(st.nextToken());
+				  c.setEmailAddress(st.nextToken());
+				  List<String> cont=new ArrayList<String>();
+				  while(st.hasMoreTokens())
+				  {
+					  cont.add(st.nextToken());
+				  }
+				  c.setContactNumber(cont);
+				  contacts.add(c);
+			  }
+			 
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
+	}
+	
+	
+	private void serializeContactDetails(List<Contact> contacts , String filename)
+	{
+		File f=new File(filename);
+		
+		if(f.exists()){
+			System.out.println("File Exists.......!!!");
+		}
+		else
+		{
+			System.out.println("File doesn't exists....!!!");
+		}
+		try {
+			f.createNewFile();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		try (
+		     FileOutputStream fos=new FileOutputStream(f);
+			ObjectOutputStream oos=new ObjectOutputStream(fos);)
+			{
+			Iterator< Contact> itr=contacts.iterator();
+			while(itr.hasNext())
+			{
+				Contact c=itr.next();
+				oos.writeObject(c);
+			}
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	private List<Contact> deserializeContact(String filename)
+	{
+
+	    List<Contact> cc=new ArrayList<Contact>();
+		File f=new File(filename);
+		
+		if(f.exists()){
+			System.out.println("File Exists.......!!!");
+		}
+		else
+		{
+			System.out.println("File doesn't exists....!!!");
+		}
+		
+		try(
+		     FileInputStream fis=new FileInputStream(f);
+			ObjectInputStream ois=new ObjectInputStream(fis);)
+			{
+			Contact c;
+			while(fis.available()>0){
+				c=(Contact) ois.readObject();
+				  cc.add(c);
+			}
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ClassNotFoundException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
+		return cc;
+		
+	}
+	
+	
+	private Set<Contact> populateContactFromDb()
+	{
+		Contact c=null;
+		Set<Contact> ccSet=new TreeSet<Contact>();
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			//System.out.println("Driver Loaded");
+
+			Connection con = DriverManager.getConnection(
+					"jdbc:mysql://localhost:3306/contactdb", "root", "root");
+			//System.out.println("connection established...!!");
+			
+			Statement st=con.createStatement();
+			ResultSet rs=st.executeQuery("select * from  contact_tbl ");
+			while(rs.next())
+			{
+				c=new Contact();
+				c.setContactID(rs.getInt(1));
+				c.setContactName(rs.getString(2));
+				c.setEmailAddress(rs.getString(3));
+				String number=rs.getString(4);
+				List<String> cont=new ArrayList<String>();
+				if(number!=null)
+				{
+					StringTokenizer st1=new StringTokenizer(number,",");
+				
+					 while(st1.hasMoreTokens())
+					 {
+						 cont.add(st1.nextToken()) ;
+					 }
+				}
+				 c.setContactNumber(cont);
+				 ccSet.add(c);		
+			}
+		
+			st.close();
+			con.close();
+
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return ccSet;
+		
+	}
+	
+	private Boolean addContacts(List<Contact> existingContact,Set<Contact> newContacts)
+	{
+		existingContact.addAll(newContacts);
+		return true;
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		Client cl=new Client();
+		List<Contact> cList=new ArrayList<Contact>();
+		Set<Contact> cSet=new TreeSet<Contact>();
+		Contact c=null;
+		int option=0; 
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		do
+		{
+			System.out.println("......MENU.......");
+			System.out.println("1. Add Contact");
+			System.out.println("2. Remove Contact");
+			System.out.println("3. search Contact By Name");
+			System.out.println("4. Search Contact By Number");
+			System.out.println("5. Add Contact Number");
+			System.out.println("6. Sort Contacts By Name");
+			System.out.println("7. Read Contacts From File");
+			System.out.println("8. Serialize Contact Details");
+			System.out.println("9. Deserialize Contact");
+			System.out.println("10 Populate Contact From Db");
+			System.out.println("11 add Contacts from set to list");
+			System.out.println("12. Exit");
+			System.out.println("Select option:");
+			try {
+				option=Integer.parseInt(br.readLine());
+			} catch (NumberFormatException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			switch(option)
+			{
+			case 1:
+				
+					c=new Contact();
+					cl.addContact(c,cList);
+				break;
+			case 2:
+				    c=new Contact();
+				try {
+					cl.removeContact(c,cList);
+				} catch (ContactNotFoundException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+				break;
+			case 3:
+				System.out.println("Enter Name: ");
+				String name;
+				try {
+					name = br.readLine();
+					c=cl.searchContactByName(name, cList);
+					System.out.println(c);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (ContactNotFoundException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				break;
+			case 4:
+				    List<Contact> cc=new ArrayList<Contact>();
+					System.out.println("Enter Contact number: ");
+						String number;
+						try {
+							number = br.readLine();
+							cc=cl.SearchContactByNumber(number, cList);
+							System.out.println(cc);
+						} catch (IOException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						} catch (ContactNotFoundException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+				
+				break;
+			case 5:
+				
+				try {
+					System.out.println("Enter ContactId: ");
+					int contactId = Integer.parseInt(br.readLine());
+					System.out.println("Enter Contact number: ");
+					String contactNo=br.readLine();
+					    cl.addContactNumber( contactId,contactNo, cList);
+				} catch (NumberFormatException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+				break;
+			case 6:
+					cl.sortContactsByName(cList);
+				break;
+			case 7:
+				 cl.readContactsFromFile(cList,"contact.txt");
+				break;
+			case 8:
+				 cl.serializeContactDetails(cList,"contact.ser");
+				break;
+			case 9:
+
+			    List<Contact> ccc=new ArrayList<Contact>();
+				ccc=cl.deserializeContact("contact.ser");
+				System.out.println("After deserializing....");
+				System.out.println(ccc);
+				break;
+			case 10:
+				 cSet=cl.populateContactFromDb();
+				 System.out.println(cSet);
+				break;
+			case 11:
+				System.out.println("Before Adding set contents.");
+				System.out.println(cList);
+				cl.addContacts(cList,cSet);
+				System.out.println("After Adding set contents.");
+				System.out.println(cList);
+				break;
+			case 12:
+				System.exit(0);
+				default:
+					System.out.println("Invalid option...!!!");
+			}
+			
+		}while(option !=12);
+	}
+
+
+	
+
+	
+	
+}
+

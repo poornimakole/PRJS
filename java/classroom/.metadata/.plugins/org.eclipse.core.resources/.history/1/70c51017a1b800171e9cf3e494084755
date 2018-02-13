@@ -1,0 +1,16 @@
+package com.psl.demo;
+
+import javax.swing.JFrame;
+
+public class WaitNotifyDemo extends JFrame {
+
+	public WaitNotifyDemo() {
+		// TODO Auto-generated constructor stub
+		setVisible(true);
+		setSize(800,600);
+	}
+	
+	public static void main(String[] args) {
+		WaitNotifyDemo wnd=new WaitNotifyDemo();
+	}
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+Enter the limit to calculate the odd numbers starting from 1:<input type="number" id="num"><br>
+   <input type="button" value="start" id="start"> 
+   <input type="button" value="stop" id="stop"> 
+   <ul id="result"></ul>
+   <script>
+        $(function(){
+        	var worker;
+        	$("#start").click({
+        		var l=$("#num").val();
+        		worker=new Worker('oddNum.js');
+        		worker.postMessage({from:1,to:l});
+                worker.onmessage=function(event)
+                {
+                    $("#result").append("<li>"+event.data+"</li>") 
+                }
+        		
+        	})
+        	
+        	$("#stop").click({
+        		worker.terminate();
+        	})
+        })
+   </script>
+</body>
+</html>

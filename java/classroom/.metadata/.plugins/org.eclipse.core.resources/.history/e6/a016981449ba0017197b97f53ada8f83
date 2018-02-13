@@ -1,0 +1,133 @@
+package com.psl.q3;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.Period;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Locale;
+import java.util.Set;
+import java.util.StringTokenizer;
+import java.util.TreeSet;
+
+public class Client {
+
+	public static void main(String[] args) {
+		
+		List<Contact> cList=new ArrayList<Contact>();
+		Set<Contact> cSet=new TreeSet<Contact>();
+		Contact c=null;
+		int option=0; 
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		do
+		{
+			System.out.println("......MENU.......");
+			System.out.println("1. Add Contact");
+			System.out.println("2. Remove Contact");
+			System.out.println("3. search Contact By Name");
+			System.out.println("4. Search Contact By Number");
+			System.out.println("5. Add Contact Number");
+			System.out.println("6. Sort Contacts By Name");
+			System.out.println("7. Read Contacts From File");
+			System.out.println("8. Serialize Contact Details");
+			System.out.println("9. Deserialize Contact");
+			System.out.println("10 Populate Contact From Db");
+			System.out.println("11 add Contacts from set to list");
+			System.out.println("12. Exit");
+			System.out.println("Select option:");
+			try {
+				option=Integer.parseInt(br.readLine());
+			} catch (NumberFormatException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			switch(option)
+			{
+			case 1:
+				
+				try {
+					c=new Contact();
+					System.out.print("Enter Contact ID: ");
+					c.setContactID(Integer.parseInt(br.readLine()));
+					
+					System.out.println("Enter Employee Name: ");
+					e.setEmployee_Name(br.readLine());
+					
+					System.out.println("Enter Employee Telephone: ");
+					e.setEmployee_Telephone(Long.parseLong(br.readLine()));
+					
+					SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/yyyy",Locale.ENGLISH);
+					System.out.println("Enter Employee joining date(dd/mm/yyyy)");
+					e.setEmployee_DOJ(sdf.parse(br.readLine()));
+					
+					System.out.println("Enter date of birth(dd/mmm/yyyy):");
+					StringTokenizer st=new StringTokenizer(br.readLine(),"/");
+					d.setDay(Integer.parseInt(st.nextToken()));
+					d.setMonth(st.nextToken().toUpperCase());
+					d.setYear(Integer.parseInt(st.nextToken()));
+					e.setDob(d);
+					eList.add(e);
+					
+				} catch (NumberFormatException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				} catch (ParseException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				 
+				break;
+			case 2:
+				
+				
+				
+				break;
+			case 3:
+				
+				
+				break;
+			case 4:
+				
+				break;
+			case 5:
+				  
+				break;
+			case 6:
+				break;
+			case 7:
+				break;
+			case 8:
+				break;
+			case 9:
+				break;
+			case 10:
+				break;
+			case 11:
+				break;
+			case 12:
+				System.exit(0);
+				default:
+					System.out.println("Invalid option...!!!");
+			}
+			
+		}while(option !=6);
+	}
+	
+}
+

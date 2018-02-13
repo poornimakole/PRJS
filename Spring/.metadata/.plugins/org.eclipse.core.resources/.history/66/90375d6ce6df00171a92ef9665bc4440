@@ -1,0 +1,33 @@
+package com.psl.dao;
+
+import java.util.List;
+
+import com.psl.bean.Employee;
+
+public class EmpDAOImpl implements IEmpDAO {
+
+	@Override
+	public void createEmployee(Employee e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Employee> getAllEmployee() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void updateEmployee(int id, String name) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteEmployee(Employee e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

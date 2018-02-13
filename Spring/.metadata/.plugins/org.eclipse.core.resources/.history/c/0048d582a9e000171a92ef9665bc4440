@@ -1,0 +1,26 @@
+package com.psl;
+
+import org.aspectj.lang.ProceedingJoinPoint;
+
+public class TicketCollector {
+	
+	public void checkingTicket(ProceedingJoinPoint jp)
+	{
+		//before
+		System.out.println("TC prints passenger list....");
+		
+		//during
+		try {
+			jp.proceed();
+			System.out.println("TC checks ticket...");
+			
+		} catch (Throwable e) {
+			// TODO Auto-generated catch block
+			System.out.println("TC collects fine...");
+		}
+		
+		//after
+	}
+	
+
+}

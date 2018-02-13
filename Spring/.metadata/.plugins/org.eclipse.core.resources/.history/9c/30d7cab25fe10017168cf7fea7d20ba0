@@ -1,0 +1,30 @@
+package com.psl.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
+//http://localhost:8080/SpringMVC/home
+@Controller
+public class EmployeeController {
+	
+	@RequestMapping(value="/home",method=RequestMethod.GET)
+	public String showHomePage(Model model){
+		System.out.println("In Employee Controller .....showHomePage()");
+		model.addAttribute("message","hiiiii");
+		return "home";
+	}
+	
+	@RequestMapping(value="/{empName}",method=RequestMethod.GET)
+	public String showEmpPage(Model model,@PathVariable String empName,@RequestParam String dept){
+		System.out.println("In Employee Controller .....showEmpPage()  I clicked"+empName);
+		model.addAttribute("empName",empName);
+		model.addAttribute("message","hiiiii "+empName);
+		model.addAttribute("department",dept);
+		return "emp";
+	}
+
+}

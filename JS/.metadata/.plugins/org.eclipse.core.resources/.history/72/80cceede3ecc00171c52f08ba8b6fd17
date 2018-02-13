@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+      
+   <script>
+        $(function(){
+        	var worker;
+        	   document.write("loading......");
+        		worker=new Worker('GenerateTable.js');
+                worker.onmessage=function(event)
+                {
+                    $("body").html(event.data); 
+                }
+      
+        })
+   </script>
+</body>
+</html>

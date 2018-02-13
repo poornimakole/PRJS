@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Question 6</title>
+<script
+    src="https://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous"></script>
+    <script>
+$(function(){
+	$("#submit").click(function(){
+
+		console.log("yo");
+		var url="jquery_3_6.jsp";
+		$.ajax({
+			type:"POST",
+			url:url,
+			data:{
+				name:$("#txtUserName").val(),
+				pwd:$('#txtPwd').val()
+			},
+			//dataType:"JSON",
+			success:function(response){
+				
+				console.log(response);
+			  alert(response);
+				
+				
+			}
+		})
+	})
+})
+</script>
+</head>
+<body>
+<table><tr><td><label for="txtUserName">User ID:</label></td>
+		<td><input type="text" id="txtUserName" placeholder="Enter Username..." autofocus required/></td></tr>
+		<tr><td><label for="txtPwd">Password:</label></td>
+		<td><input type="text" id="txtPwd" required/></td></tr>
+		<tr><td colspan=2><button id="submit">Submit</button></td></tr></table>
+
+</body>
+</html>

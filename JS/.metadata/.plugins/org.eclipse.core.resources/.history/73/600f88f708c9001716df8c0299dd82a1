@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<script>
+  /*  $(document).ready(function(){
+	   $("#empid").blur(function(){
+		   var  empid=$("#empid").val();
+		   var url="requestProcessorJSON.jsp?empid="+empid;
+		   $.ajax({
+			   type:"GET",
+			   url:url,
+			   dataType:"JSON",
+			   success:function(response){
+				   console.log(response);
+				   $("#name").val(response.name);
+				   $("#company").val(response.company);
+			   }
+		   })
+	   })
+   }) */
+   
+   $(document).ready(function(){
+	   $("#empid").blur(function(){
+		   var  empid=$("#empid").val();
+		   var url="requestProcessorXML.jsp?empid="+empid;
+		   $.ajax({
+			   type:"GET",
+			   url:url,
+			   success:function(response){
+				   console.log(response);
+				   $(response).find("data").each(function(){
+					   $("#name").val($(this).find('name').text());
+					   $("#company").val($(this).find('company').text());
+
+				   });
+				   
+				  
+			   }
+		   })
+	   })
+   })
+</script>
+</head>
+<body>
+   <table>
+     <tr>
+     <td><label>Employee ID</label></td>
+     <td><input type="text" id="empid"></td>
+     </tr>
+     
+     <tr>
+      <td><label>Employee Name</label></td>
+     <td><input type="text" id="name"></td>
+     </tr>
+     
+     <tr>
+      <td><label>Employee Company</label></td>
+     <td><input type="text" id="company"></td>
+     </tr>
+   </table>
+</body>
+</html>

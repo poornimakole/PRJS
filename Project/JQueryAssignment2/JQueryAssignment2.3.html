@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script>
+            $(document).ready(function(){
+                $("#inner").click(function(){
+                    alert("I am inside Innermost Div");
+                });
+                $("#middle").click(function(event){
+                    alert("I am in Middle Div");
+                   
+                });
+                $("#outer").click(function(){
+                    alert("I am in the outer Div");
+                });
+            });
+            </script>
+</head>
+<body>
+        <div id="outer" style="height: 100px; width: 500px; padding: 10px; border: 1px solid blue; background-color: rgb(124, 202, 226);">
+		Outermost Div
+		<div id="middle" style="background-color: red;height: 80px; width: 400px">
+           Middle Div <br> 
+            <div id="inner" style="background-color: yellow">Innermost div</div>
+        </div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+package com.psl.q3;
+
+public class Printer implements Runnable {
+
+	private Thread newThread;
+	
+	public Printer(String threadName) {
+		// TODO Auto-generated constructor stub
+		 newThread = new Thread(this, threadName);   
+	        System.out.println(newThread);
+	        newThread.start();      
+	}
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+    <!-- <script src="plugin.js"></script> -->
+    <script src="jquery.watermark.min.js"></script>
+    <script>
+        // $(function(){
+        //     $("p").colorit();
+        // })
+
+        $(function(){
+            $("img").watermark({
+                text:"hp !",
+                textSize:50,
+                textWidth:300,
+                margin:20      
+            })
+        })
+     
+    </script>
+</head>
+<body>
+    <!-- <p>This is para</p> -->
+    <img src="hp1.jpg" width="300" height="300"/>
+    <br/>
+    Date:-<input type="text" id="date1"/><br/> 
+    Phone:-<input type="text" id="phone1"/><br/> 
+    ProductKey:-<input type="text" id="prodkey1"/><br/> 
+</body>
+</html>

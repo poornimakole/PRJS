@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div style="padding:30px;">
+        <Button>
+            <img src="hp3.jpg" style="width: 100px; height: 100px;"></img>
+        </Button>
+    </div>
+    <script>
+         var div=document.getElementsByTagName("div")[0];
+        var button=document.getElementsByTagName("button")[0];
+        var img=document.getElementsByTagName("img")[0];
+
+      div.addEventListener("click",divClicked,true);
+      button.addEventListener("click",buttonClicked,true);
+      img.addEventListener("click",imgClicked,true);
+
+      function divClicked()
+      {
+          alert("div clicked");
+      }
+
+      function buttonClicked(e)
+      {
+          alert("button clicked");
+      }
+
+      function imgClicked()
+      {
+          alert("image clicked");
+      }
+
+      div.addEventListener("click",divClicked,false);
+      button.addEventListener("click",buttonClicked,false);
+      img.addEventListener("click",imgClicked,false);
+
+      function divClicked()
+      {
+          alert("div clicked");
+      }
+
+      function buttonClicked(e)
+      {
+          alert("button clicked");
+      }
+
+      function imgClicked()
+      {
+          alert("image clicked");
+      }
+    
+    </script>
+</body>
+</html>

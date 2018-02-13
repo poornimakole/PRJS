@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp" type="text/javascript"></script>
+<style type="text/css">
+    #displayMap{
+        height: 400px;
+        width:  300px;
+        border:2px solid black;
+    }
+</style>
+</head>
+<body>
+  <div id="info"></div>
+  <div id="errorDiv"></div>
+  <div id="displayMap"></div>
+  <script type="text/javascript">
+//      if(navigator.geolocation){
+//     	 navigator.geolocation.getCurrentPosition(function(position){
+//     		 var latitude=position.coords.latitude;
+//     		 var longitude=position.coords.longitude;
+//     		 document.write("latitude: "+ latitude +" longitude :"+longitude);
+//     	 })
+//      }
+
+
+
+	$(document).ready(function(){
+		if(navigator.geolocation){
+			$("#info").html("fetching details.....");
+			var options={
+					enableHighAccuracy:false,
+					maximumAge:0,
+					timeout:60000
+			}
+		}
+		
+		navigator.geolocation.getCurrentPosition(onSuccess,onError,options);
+		
+		
+		function onSuccess(){
+			$("info").append("latitude:"+position.coords.latitude);
+			$("info").append("longitude:"+position.coords.longitude);
+			initializeMap(position.coords.latitude,position.coords.longitude);
+		}
+		
+		function onError(){
+			$("#errorDiv").html("Error Occured");
+		}
+	})
+	
+	function initializeMap(latitude,longitude){
+			var latlng=new google.maps.LatLng(latitude,longitude);
+			var myOptions={
+					zoom:16,
+					center:latlng,
+					mapType:google.maps.MapTypeId.ROADMAP
+			};
+			
+			var s=new goole.maps.Map(document.getElementById("#displayMap"),myOptions);
+		}
+	})
+  </script>
+</body>
+</html>

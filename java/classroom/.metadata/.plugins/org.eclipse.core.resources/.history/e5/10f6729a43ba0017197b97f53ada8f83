@@ -1,0 +1,17 @@
+package com.psl.q3;
+
+import java.io.Serializable;
+import java.util.List;
+
+public class Contact implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	int contactID;
+	String ContactName;
+	String emailAddress;
+	List<String> contactNumber;
+
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1">
+    <img src="apple1.jpg"/>
+    <img src="apple2.jpg"/>
+    <img src="apple3.jpg"/>
+    <img src="hp1.jpg"/>
+    <img src="hp2.jpg"/>
+    <img src="hp3.jpg"/>
+    </div>
+    <div id="div2"></div>
+    <script>
+        document.getElementById("div1").onclick=function(event){
+            var elem = event.target;
+             var attr=elem.getAttribute("src");
+    
+            var s=document.getElementById("div1");
+            var tar= document.getElementById("div2");
+            var a=document.createElement("img");
+                  a.setAttribute("src",attr);
+                  if(tar.childNodes.length==3)
+                  {
+                      alert("cannot add more elements");
+                  }
+                  else
+                  {
+                      s.removeChild(elem);
+                      tar.appendChild(a);
+                  }
+
+               
+
+        }
+
+    </script>
+</body>
+</html>

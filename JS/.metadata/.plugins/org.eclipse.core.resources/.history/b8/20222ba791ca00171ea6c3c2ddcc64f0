@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+  Enter User Name<input type="text" id="name"/>
+  <input type="button" id="btn" value="Click Me">
+  <script type="text/javascript">
+  
+  document.getElementById("btn").onclick=function(){
+	  var n=document.getElementById("name").value;
+	  setItem('name',n);
+	 
+  }
+  
+  </script>
+</body>
+</html>

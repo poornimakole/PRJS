@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script>
+        $(function(){
+           $("#Submit1").click(function(event){
+
+            details="Customer Name: "+$('#custName').val()+"<br> Address: "+$('#address').val()+"<br> Number of pizza's: "+$('#noOfPizza').val()+
+                     "<br>Shape of pizza: "+$("input:radio:checked").val()+"<br>"+$("input[id='Checkbox1']:checked").val();
+                    $("div").empty();
+                     $("div").append(details);
+                     
+                     event.preventDefault();
+
+           })
+        })
+    </script>
+</head>
+<body>
+        <form action="/" method="post">
+            <table class="style1">
+                <tbody>
+                    <tr>
+                        <td class="style2">
+                           Customer Name
+                        </td>
+                        <td>
+                            <input id="custName" type="text"/>
+                        </td>
+                    </tr>
+                    <tr>
+                            <td class="style2">
+                                Address
+                            </td>
+                            <td>
+                                    <textarea id="address" colss="40" name="address"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                                <td class="style2">
+                                   No. of Pizza's
+                                </td>
+                                <td>
+                                    <input id="noOfPizza" type="number"/>
+                                </td>
+                            </tr>
+                        <tr>
+                                <td class="style2">
+                                   Shape of pizza
+                                </td>
+                                <td>
+                                    <input id="square" type="radio" checked="checked" name="shape" value="square"/>Square
+                                    <input id="circle" type="radio"  name="shape" value="circle"/>Circle
+                                </td>
+                            </tr>
+                          <tr>
+                                   
+                                    <td>
+                                        <input id="Checkbox1" type="checkbox"/><label for="Checkbox1"></label> Agree to terms and conditions
+                
+                                    </td>
+                                    <td class="style2">  </td>
+                        </tr>  
+                       
+                            <tr>
+                                    <td class="style2">
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        <input id="Submit1" type="submit" value="Confirm" />
+                                    </td>
+                                </tr>
+                            
+                </tbody>
+            </table>
+            <div></div>
+        </form>
+</body>
+</html>

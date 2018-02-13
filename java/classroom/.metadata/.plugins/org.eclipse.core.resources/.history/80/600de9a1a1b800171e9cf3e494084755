@@ -1,0 +1,35 @@
+package com.psl.demo;
+
+import java.awt.Color;
+import java.awt.Graphics;
+
+import javax.swing.JFrame;
+
+public class WaitNotifyDemo extends JFrame {
+
+	public WaitNotifyDemo() {
+		// TODO Auto-generated constructor stub
+		setVisible(true);
+		setSize(800,600);
+		setTitle("Lets Race.....!!!!");
+	}
+	
+	@Override
+	public void paint(Graphics g) {
+		// TODO Auto-generated method stub
+		super.paint(g);
+		g.setColor(Color.GREEN);
+		g.fillOval(10,100,50, 50);
+		
+		g.setColor(Color.RED);
+		g.fillOval(10,200,50, 50);
+		
+		g.setColor(Color.BLUE);
+		g.fillOval(10,300,50, 50);
+		
+	}
+	
+	public static void main(String[] args) {
+		WaitNotifyDemo wnd=new WaitNotifyDemo();
+	}
+}

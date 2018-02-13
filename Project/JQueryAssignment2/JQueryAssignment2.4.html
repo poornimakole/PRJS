@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script>
+            $(document).ready(function(){
+                var lastt, tdiff;  
+                $( "#div1" ).click(function( event ) {
+                    
+                    if (lastt) {  
+                    tdiff = event.timeStamp - lastt;  
+                    alert("Time differnce is "+tdiff+" ms");
+                    lastt = event.timeStamp;
+                   }   
+                   else {  
+                     alert("Click again!!");
+                     lastt = event.timeStamp; 
+                     } 
+                    });  
+                
+            });
+            </script>
+</head>
+<body>
+        <div id="div1" style="height: 300px; width: 300px; background-color: red;">
+                The Div
+        </div>
+</body>
+</html>

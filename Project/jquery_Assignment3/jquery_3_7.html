@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Question 7</title>
+<script
+    src="https://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous"></script>
+   <script>
+   $(function(){
+		$("#b1").click(function (){
+			var url="jquery_3_7_XML.jsp";
+			$.ajax({
+				type:"GET",
+				
+				url:url,
+				dataType:"XML",
+				success:function(response){
+					console.log(response);
+					$("#fname").val(response.getElementsByTagName("fname")[0].innerHTML);
+					$("#lname").val(response.getElementsByTagName("lname")[0].innerHTML)
+					$("#city").val(response.getElementsByTagName("city")[0].innerHTML)
+					$("#contact").val(response.getElementsByTagName("contact")[0].innerHTML)
+					
+					
+				}
+			})
+		
+	})
+		$("#b2").click(function (){
+			var url="jquery_3_7_JSON.jsp"
+			$.ajax({
+				type:"GET",
+				url:url,
+				dataType:"JSON",
+				success:function(response){
+					$("#pid").val(response.pid);
+					$("#pname").val(response.pname);	
+				}
+			})
+		})
+
+   })
+		
+		
+   </script>
+</head>
+<body>
+<h1>Details of User</h1>
+<table>
+<tbody>
+<tr>
+<th>Personal Details</th>
+<th><button id="b1">Get Personal Details</button></th>
+</tr>
+<tr>
+<td>First Name:</td>
+<td><input id="fname" type="text"/>
+<tr>
+
+<tr>
+<td>Last Name:</td>
+<td><input id="lname" type="text"/>
+<tr>
+
+<tr>
+<td>City:</td>
+<td><input id="city" type="text"/>
+<tr>
+
+<tr>
+<td>Contact:</td>
+<td><input id="contact" type="text"/>
+<tr>
+
+</tbody>
+
+</table>
+<br>
+<br>
+<table>
+<tbody>
+<tr>
+<th>Project Details</th>
+<th><button id="b2">Get project Details</button></th>
+</tr>
+<tr>
+<td>Project Id:</td>
+<td><input id="pid" type="text"/>
+<tr>
+
+<tr>
+<td>Project Loacation:</td>
+<td><input id="pname" type="text"/>
+<tr>
+</tbody>
+</table>
+
+
+</body>
+</html>

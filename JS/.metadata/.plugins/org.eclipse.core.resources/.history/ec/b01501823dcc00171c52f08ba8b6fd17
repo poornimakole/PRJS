@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+   <script>
+        $(function(){
+        	var worker;
+        	
+        		worker=new Worker('oddNum.js');
+        		worker.postMessage({from:1,to:l});
+                worker.onmessage=function(event)
+                {
+                    $("#result").append("<li>"+event.data+"</li>") 
+                }
+      
+        })
+   </script>
+</body>
+</html>

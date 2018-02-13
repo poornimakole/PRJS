@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;DbConnect.java&apos; to &apos;ExtraAssignment 2/src/com.psl.q1&apos;&#x0D;&#x0A;- Original project: &apos;Assignment 11&apos;&#x0D;&#x0A;- Destination element: &apos;ExtraAssignment 2/src/com.psl.q1&apos;&#x0D;&#x0A;- Original element: &apos;com.psl.q1.DbConnect.java&apos;" description="Copy compilation unit" destination="=ExtraAssignment 2/src&lt;com.psl.q1" element1="/src&lt;com.psl.q1{DbConnect.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1508991222632" units="1" version="1.0"/>
+</session>

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang = "en">
+   <head>
+      <meta charset = "utf-8">
+      <title>jQuery UI Menu functionality</title>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet"> 
+        <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.6.3/jquery.contextMenu.css" rel="stylesheet"> -->
+        <script
+        src="https://code.jquery.com/jquery-3.2.1.js"
+        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+        crossorigin="anonymous"></script>
+        <script
+        src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+        integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+        crossorigin="anonymous"></script>
+       <script src="jquery_3_5.js"></script>
+      <!-- <script src = "https://code.jquery.com/jquery-1.10.2.js"></script> -->
+<!-- <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.6.3/jquery.contextMenu.js"></script> -->
+      
+   
+      <style>
+         .ui-menu {
+            width: 200px;
+         }
+      </style>
+    
+      
+      <script>
+        $(function(){
+            $( "#menu-1" ).move();
+        })
+           
+        
+      </script>
+   </head>
+   
+   <body>
+     
+      <ul id = "menu-1">
+         <li><a href = "#">Waterfall</a></li>
+         <li><a href = "#">River</a></li>
+         <li><a href = "#">Lake</a>
+            <ul>
+               <li><a href = "#">Black</a></li>
+               <li><a href = "#">Red</a></li>
+               <li><a href = "#">Blue</a></li>
+            </ul>
+         </li>
+         <li><a href = "#">Pond</a></li>
+         <li><a href = "#">Sea</a>
+            <ul>
+                    <li><a href = "#">Teal</a></li>
+                    <li><a href = "#">Pink</a></li>
+                 </ul></li>
+      </ul>
+   </body>
+</html>

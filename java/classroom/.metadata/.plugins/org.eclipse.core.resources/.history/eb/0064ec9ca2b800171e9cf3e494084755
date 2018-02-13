@@ -1,0 +1,67 @@
+package com.psl.demo;
+
+import java.awt.Color;
+import java.awt.Graphics;
+
+import javax.swing.JFrame;
+
+public class WaitNotifyDemo extends JFrame implements Runnable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+
+	public WaitNotifyDemo() {
+		// TODO Auto-generated constructor stub
+		setVisible(true);
+		setSize(800,600);
+		setTitle("Lets Race.....!!!!");
+	}
+	
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+		if(Thread.currentThread().getName().equals("green"))
+		{
+			
+		}
+		else if(Thread.currentThread().getName().equals("red"))
+		{
+			
+		}
+		else
+		{
+			
+		}
+	}
+	
+	@Override
+	public void paint(Graphics g) {
+		// TODO Auto-generated method stub
+		super.paint(g);
+		g.setColor(Color.GREEN);
+		g.fillOval(10,150,50, 50);
+		
+		g.setColor(Color.RED);
+		g.fillOval(10,250,50, 50);
+		
+		g.setColor(Color.BLUE);
+		g.fillOval(10,350,50, 50);
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		WaitNotifyDemo wnd=new WaitNotifyDemo();
+		
+		Thread t1=new Thread(wnd,"green");
+		Thread t2=new Thread(wnd,"red");
+		Thread t3=new Thread(wnd,"blue");
+	}
+
+	
+}

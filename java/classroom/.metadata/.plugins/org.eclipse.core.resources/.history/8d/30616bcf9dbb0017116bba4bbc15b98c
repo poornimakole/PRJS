@@ -1,0 +1,33 @@
+package com.psl.q3;
+
+public class Client extends Thread{
+
+	
+	@Override
+		public void run() {
+			// TODO Auto-generated method stub
+		  System.out.println(Thread.currentThread().getName()+"         "+Thread.currentThread().getPriority());
+		}
+	
+	
+   public static void main(String[] args) {
+	
+	   Client c=new Client();
+	   
+	   Thread t1=new Thread(c,"One");
+	   Thread t2=new Thread(c,"Two");
+	   Thread t3=new Thread(c,"Three");
+	   
+	   t1.setPriority(4);
+	   t2.setPriority(8);
+	   t3.setPriority(2);
+	   
+	   System.out.println("Name      Priority");
+	   System.out.println("----------------- ");
+	   System.out.println(Thread.currentThread().getName()+"     "+Thread.currentThread().getPriority());
+	   
+	   t1.start();
+	   t2.start();
+	   t3.start();
+}
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Web Storage</title>
+</head>
+<body>
+  <script>
+//        if(localStorage.visitorHits){
+//     	   document.write("Visitor Hits: "+(localStorage.visitorHits=Number(localStorage.visitorHits)+1));
+//       }
+//        else
+//     	   {
+//     	   document.write("Visitor Hits: "+(localStorage.visitorHits=1));
+    	   
+//     	   }
+       
+       
+//        if(sessionStorage.visitorHits){
+//     	   document.write("Visitor Hits: "+(sessionStorage.visitorHits=Number(sessionStorage.visitorHits)+1));
+//       }
+//        else
+//     	   {
+//     	   document.write("Visitor Hits: "+(sessionStorage.visitorHits=1));
+    	   
+//     	   }
+//removes specific key value 
+sessionStorage.removeItem("visitorHits");
+//clears out all the data
+//sessionStorage.clear();
+//setting the data
+setItem(c,12);
+getItem(c);
+  </script>
+</body>
+</html>

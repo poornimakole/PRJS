@@ -1,0 +1,21 @@
+package com.psl.q5;
+
+public class SearchThread extends Thread {
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		SearchThread st=new SearchThread();
+		Thread t1=new Thread(st,"Thread1");
+		Thread t2=new Thread(st,"Thread2");
+		Thread t3=new Thread(st,"Thread3");
+		Thread t4=new Thread(st,"Thread4");
+	}
+
+}

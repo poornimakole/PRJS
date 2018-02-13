@@ -1,0 +1,9 @@
+package com.tienda.util;
+
+import javax.ws.rs.core.Application;
+
+public class TiendaApplication extends Application{
+	
+	
+
+}

@@ -1,0 +1,35 @@
+package com.psl.q3;
+
+public class BankAccount {
+	 String type;
+	 float balance;
+	 
+	 public BankAccount(int balance,String type) {
+		// TODO Auto-generated constructor stub
+		 this.balance=balance;
+		 this.type=type;
+		 
+	}
+	 void deposit(float amt)
+	 {
+		if(amt<0)
+		{
+			throw new InvalidAmountException("Negative amount is not acceptable.....!!!"); 
+		}
+		else
+		{
+			
+		}
+	 }
+	 void withdraw(float amt)
+	 {
+		 
+	 }
+	 float getBalance()
+	 {
+		 
+		return balance;		 
+	 }
+
+
+}

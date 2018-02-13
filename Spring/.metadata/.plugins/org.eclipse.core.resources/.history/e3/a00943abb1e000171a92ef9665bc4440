@@ -1,0 +1,10 @@
+package com.psl;
+
+public class Order {
+	
+	public void placeOrder(){
+		System.out.println("adding to cart...");
+		System.out.println("placing order.....");
+	}
+
+}

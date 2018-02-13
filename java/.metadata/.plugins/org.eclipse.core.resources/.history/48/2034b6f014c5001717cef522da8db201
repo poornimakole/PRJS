@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+   <table>
+     <tr>
+     <td><label>Employee ID</label></td>
+     <td><input type="text" id="empid"></td>
+     </tr>
+     
+     <tr>
+      <td><label>Employee Name</label></td>
+     <td><input type="text" id="name"></td>
+     </tr>
+     
+     <tr>
+      <td><label>Employee Company</label></td>
+     <td><input type="text" id="company"></td>
+     </tr>
+   </table>
+</body>
+</html>

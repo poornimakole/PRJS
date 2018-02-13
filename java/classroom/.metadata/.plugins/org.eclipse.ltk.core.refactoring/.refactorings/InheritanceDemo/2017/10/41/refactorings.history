@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Employee.java&apos; to &apos;CompareSorting/src/com.psl.sorting&apos;&#x0D;&#x0A;- Original project: &apos;InheritanceDemo&apos;&#x0D;&#x0A;- Destination element: &apos;CompareSorting/src/com.psl.sorting&apos;&#x0D;&#x0A;- Original element: &apos;com.psl.employee.Employee.java&apos;" description="Copy compilation unit" destination="=CompareSorting/src&lt;com.psl.sorting" element1="/src&lt;com.psl.employee{Employee.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1507884264014" units="1" version="1.0"/>
+</session>

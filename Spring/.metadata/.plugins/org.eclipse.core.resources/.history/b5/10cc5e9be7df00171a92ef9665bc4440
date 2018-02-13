@@ -1,0 +1,18 @@
+package com.psl.client;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.psl.bean.Employee;
+import com.psl.service.EmployeeService;
+
+public class Client {
+
+	ApplicationContext context=new ClassPathXmlApplicationContext("Db.xml");
+	
+	EmployeeService s =(EmployeeService)context.getBean("service",EmployeeService.class);
+	Employee e=(Employee)context.getBean("emp",Employee.class);
+	
+	s.createEmployee(e);
+	
+}

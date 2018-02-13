@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp" type="text/javascript"></script>
+</head>
+<body>
+  <script type="text/javascript">
+     if(navigator.geolocation){
+    	 navigator.geolocation.getCurrentPosition(function(position){
+    		 var latitude=position.coords.latitude;
+    		 var longitude=position.coords.longitude;
+    		 document.write("latitude: "+ latitude +" longitude :"+longitude);
+    	 })
+     }
+  </script>
+</body>
+</html>

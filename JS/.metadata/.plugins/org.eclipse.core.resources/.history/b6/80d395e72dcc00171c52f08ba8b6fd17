@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+Enter the limit to calculate the odd numbers starting from 1:<input type="number" id="num"><br>
+   <input type="button" value="start" onclick="Start()"> 
+   <input type="button" value="stop" onclick="Stop()"> 
+   <ul id="result"></ul>
+   <script>
+        $(function(){
+        	var worker;
+        	function Start(){
+        		var l=$("#num").val();
+        		
+        	}
+        	
+        	function Stop(){
+        		
+        	}
+        })
+   </script>
+</body>
+</html>

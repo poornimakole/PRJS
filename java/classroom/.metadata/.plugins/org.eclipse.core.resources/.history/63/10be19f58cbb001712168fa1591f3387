@@ -1,0 +1,43 @@
+package com.psl.q4;
+
+import java.text.SimpleDateFormat;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Client {
+	
+	private Employee inputData() throws CustomException {
+		// TODO Auto-generated method stub
+	    Employee e=new Employee();
+	    Scanner sc=new Scanner(System.in);
+	    
+	    SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/yyyy",Locale.ENGLISH);
+		System.out.println("Enter Employee Name");
+		 String name=sc.next();
+		 if(name==null)
+		 {
+			 throw new CustomException("name cannot be empty.....");
+		 }
+		  e.setName(name);
+		 System.out.println("Enter Employee Address");
+		 String add=sc.next();
+		 if(add==null)
+		 {
+			 throw new CustomException("Address is mandatory.....");
+		 }
+		 e.setAddress(add);
+		 System.out.println("Enter Employee Date of birth");
+		System.out.println("");
+		
+		return null;
+	}
+
+	public static void main(String[] args) 
+	{
+		Client c=new Client();
+		
+		 Employee e= c.inputData();
+	}
+
+	
+}

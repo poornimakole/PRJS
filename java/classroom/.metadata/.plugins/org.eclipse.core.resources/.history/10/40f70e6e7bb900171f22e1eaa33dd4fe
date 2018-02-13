@@ -1,0 +1,23 @@
+package com.psl.q4;
+
+public class Storage {
+ 
+	Integer num;
+
+	public Storage() {
+		// TODO Auto-generated constructor stub
+		if(num != null && num  == 10){
+            System.exit(0);
+		}
+	}
+	
+	public Integer getNum() {
+		return num;
+	}
+	
+	public void setNum(Integer num) {
+		this.num = num;
+	}
+	
+	
+}

@@ -1,0 +1,33 @@
+package com.psl.q4;
+
+public class Printer implements Runnable {
+
+	private Thread newThread;
+	Storage st=null;
+	
+	public Printer(Storage st) {
+		// TODO Auto-generated constructor stub
+		 newThread = new Thread(this, threadName);
+	        newThread.start();  
+	        this.st=st;
+	}
+	
+	@Override
+	public void run() {
+		
+		 while(true){
+	            while(st.getNum()!= null)
+	                synchronized(this){
+	                    try{
+	                        wait();
+	                    }catch(InterruptedException e){
+	                         
+	                    }
+	                }
+	        System.out.println(Thread.currentThread().getName() + " " + st.getNum());
+	        st.num = 0;
+	        }
+		 
+	} 
+
+}

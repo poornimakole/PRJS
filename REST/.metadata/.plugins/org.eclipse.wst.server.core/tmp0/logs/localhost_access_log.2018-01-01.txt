@@ -1,0 +1,14 @@
+127.0.0.1 - - [01/Jan/2018:13:55:07 +0530] "GET / HTTP/1.1" 404 951
+0:0:0:0:0:0:0:1 - - [01/Jan/2018:13:55:08 +0530] "GET /Tienda/WEB-INF/classes/com/tienda/util/TiendaApplication.java HTTP/1.1" 404 949
+0:0:0:0:0:0:0:1 - - [01/Jan/2018:13:59:04 +0530] "GET /Tienda/ HTTP/1.1" 404 967
+0:0:0:0:0:0:0:1 - - [01/Jan/2018:13:59:49 +0530] "GET /Tienda/users?uname=Gertude HTTP/1.1" 200 57
+0:0:0:0:0:0:0:1 - - [01/Jan/2018:14:08:33 +0530] "GET /Tienda/WEB-INF/classes/com/tienda/resource/UserResource.java HTTP/1.1" 404 949
+127.0.0.1 - - [01/Jan/2018:14:08:54 +0530] "GET / HTTP/1.1" 404 951
+0:0:0:0:0:0:0:1 - - [01/Jan/2018:14:08:55 +0530] "GET /Tienda/ HTTP/1.1" 404 967
+0:0:0:0:0:0:0:1 - - [01/Jan/2018:14:09:21 +0530] "GET /Tienda/users/Gertude HTTP/1.1" 200 57
+127.0.0.1 - - [01/Jan/2018:14:16:53 +0530] "GET / HTTP/1.1" 404 951
+0:0:0:0:0:0:0:1 - - [01/Jan/2018:14:16:54 +0530] "GET /Tienda/ HTTP/1.1" 404 967
+0:0:0:0:0:0:0:1 - - [01/Jan/2018:14:17:04 +0530] "GET /Tienda/users/Gertude HTTP/1.1" 200 57
+0:0:0:0:0:0:0:1 - - [01/Jan/2018:14:18:19 +0530] "GET /Tienda/users/Gertude HTTP/1.1" 200 142
+0:0:0:0:0:0:0:1 - - [01/Jan/2018:14:21:09 +0530] "GET /Tienda/users/Gertude HTTP/1.1" 200 57
+0:0:0:0:0:0:0:1 - - [01/Jan/2018:14:30:28 +0530] "GET /Tienda/users/Gertude HTTP/1.1" 200 142

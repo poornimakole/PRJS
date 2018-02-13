@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script>
+           $(function(){
+
+              $("body").on("click  ","ul,li,div,p",clicked)
+
+              function clicked(){
+             alert("Node type:"+this.nodeName+"\n number of childs: "+$(this).children().length);
+            
+          }
+           });
+    </script>
+</head>
+<body>
+    <ul id="list1">
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 4</li>
+        <li>item 5</li>
+        <li>item 6</li>
+    </ul>
+
+    <div id="div1">Div 1</div>
+    <div id="div2">Div 2</div>
+    <div id="div3">Div 3</div>
+
+    <p id="para1">Para 1</p>
+    <p id="para2">Para 2</p>
+    <p id="para3">Para 3</p>
+</body>
+</html>

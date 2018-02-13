@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script>
+        $(document).ready(function(){
+          //  $("li[id=item3]").css("border","5px solid blue");
+          //  $(".a").css("background","green");
+          //  $("div:lt(2),p:lt(2)").css("border","5px solid blue");
+          //$("li:first,li:last").css("fontSize","46px")
+         // $("*[id*=ar]").css("background","green")
+        // $("ul+p").css("background","green")
+         // $("div,p").css("background","green")
+         //$("ul").siblings().css("background","green")
+         $("*").css("border","5px solid blue")
+        })
+    </script>
+</head>
+<body>
+    <div id="div1">This is div 1</div>
+    <div id="div2">This is div 2</div>
+    <div id="div3" class="a">This is div 3</div>
+    <div id="div4" class="a">This is div 4</div>
+    <ul id="list1">
+        <li class="b">item 1 </li>
+        <li class="b">item 2</li>
+        <li id="item3">item 3</li>
+        <li>item 4</li>
+        <li>item 5</li>
+    </ul>
+    <p id="para1">para 1</p>
+    <p id="para2" class="a">para2</p>
+    <p></p>
+</body>
+</html>

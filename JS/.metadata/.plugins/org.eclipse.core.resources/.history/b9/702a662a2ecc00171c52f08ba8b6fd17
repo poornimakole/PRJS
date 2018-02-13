@@ -1,0 +1,7 @@
+self.onmessage=function(event){
+   limit=event.data.to;
+}
+for (var i = limit; i >0; i--) {   
+    if(i%2!=0)
+    postMessage(i);
+}

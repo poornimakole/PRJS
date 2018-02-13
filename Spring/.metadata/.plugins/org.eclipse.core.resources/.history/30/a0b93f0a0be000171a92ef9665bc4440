@@ -1,0 +1,12 @@
+package com.psl.dao;
+
+import java.util.List;
+import com.psl.bean.User;
+
+public interface IUserDAO {
+
+	void createUser(User u);
+	List<User> miniStatement();
+	void depositAmount(int account_no,int amount);
+	void withdrawAmount(int account_no,int amount);
+}

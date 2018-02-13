@@ -1,0 +1,48 @@
+package com.psl.q2;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Client {
+
+	  public static void main(String[] args) {
+		
+		  BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		  TechnicalManager tm []=new TechnicalManager[5];
+		  String workPlace;
+		  int noOfEmployeeReporting,noOfProject,promotionTillDate;
+		   for (int i = 0; i < tm.length; i++) 
+		   {
+			 try {
+
+				 System.out.println("Enter no of employee reporting manager:");
+				 noOfEmployeeReporting=Integer.parseInt(br.readLine());
+				 System.out.println("Enter workplace of manager:");
+				 workPlace=br.readLine();
+				 System.out.println("Enter manager promotions till date:");
+				 promotionTillDate=Integer.parseInt(br.readLine());
+				 System.out.println("Enter no of project handle by manager:");
+				 noOfProject=Integer.parseInt(br.readLine());
+				 if(promotionTillDate==0 )
+				 {
+					 throw new MyCustomException("promotion till date and number of projects cannot be zero");
+				 }	 
+				 
+			} catch (NumberFormatException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (MyCustomException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			 
+		   }
+	  }
+	  
+	  
+	  
+}

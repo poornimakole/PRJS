@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form</title>
+</head>
+<body>
+    <form method="post">
+   <p>please complete all required fields marked with a *.</p>
+   <fieldset>
+       <legend>User Details</legend>
+       First Name * <input id="fname" type="text" required><br>
+       Last Name * <input id="fname" type="text" required><br>
+       Email * <input id="email_id" type="email" required><br>
+       Password * <input id="pwd" type="password" pattern="(?=.*\d)(?=.*[A-Z]).{6,20}" required><br>   
+    </fieldset> 
+    <fieldset>
+            <legend>Personal Details</legend>
+            Birth Date*<input id="birthDate" type="date" required>
+            <fieldset>
+                    <legend>Gender</legend>
+                    <input id="male" type="radio" value="male">Male
+                    <input id="female" type="radio" value="female">Female
+                       
+            </fieldset> 
+               
+    </fieldset> 
+    <fieldset>
+            <legend>Address</legend>
+            <fieldset>
+                    <legend>Phone</legend>
+                    Area Code*<input id="areacode" type="text" pattern="[A-Z a-z]{2}\d{2}[A-Z a-z]{2}" required ><br>
+                    Three Digits* <input id="threeDigits" type="text" pattern="\d{3}" required ><br>
+                    Four Digits* <input id="fourDigits" type="text" pattern="\d{4}" required ><br>    
+            </fieldset><br>
+
+            Location *
+            <input type="text" list="loc" required>
+            <datalist id="loc">
+                <option value="mapusa"></option>
+                <option value="panjim"></option>
+                <option value="verna"></option>
+                <option value="margao"></option>
+                <option value="others"></option>
+            </datalist><br><br>
+        
+            Zip Code* <input id="zipcode" type="text" pattern="\d{6}" required ><br>  
+    </fieldset>
+    <fieldset>
+            <legend>Terms of Service</legend>
+            <input type="checkbox" id="checkbox1" required>*I agree to terms of service.
+               
+    </fieldset>  
+    <input type="submit" id="submit" value="Submit" > 
+    <input type="button" id="cancel" value="Cancel">
+</form>
+</body>
+</html>

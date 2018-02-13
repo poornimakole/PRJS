@@ -1,0 +1,31 @@
+package com.psl.q1;
+
+public class Client extends Thread {
+ 
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+			
+				if (Thread.currentThread().getName().equals("Thread1")) 
+				{
+					System.out.println("Thread 1 is executing");
+				} else 
+				{
+					System.out.println("Thread 2 is executing");
+				}
+		}
+	
+	public static void main(String[] args) {
+		
+	Client c= new Client();
+
+	   System.out.println("Stste of Main Thread :"+ Thread.currentThread().getState());
+		Thread t1=new Thread(c,"Thread1");
+		Thread t2=new Thread(c,"Thread2");
+
+		
+		
+		t1.start();
+		t2.start();
+	}
+}

@@ -1,0 +1,10 @@
+package com.psl.q3;
+
+public class Client {
+  
+	public static void main(String[] args) {
+		
+		Counter c=new Counter("Thread1");
+	}
+	
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+	#div1
+	{
+	  width:50px;
+	  height:50px;
+	  background-color:blue;
+	}
+</style>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script>
+   $(function(){
+	   $("#start").click(function(){
+		   $("#div1").animate({left:"+=200px"},2000)
+		           .queue(function(){
+		        	   $(this).toggleClass("red").dequeue();
+		           })
+		           .queue(function(){
+		        	   $(this).addClass("customBorder").dequeue();
+		           })
+	       });
+	   
+	      $("#stop").click(function(){
+	    	  var myDiv=$("#div1");
+	    	  //myDiv.clearQueue();
+	    	  myDiv.stop();
+	      });
+   });
+  </script>
+</head>
+<body>
+  <button id="start">Start Animation</button>
+  <button id="stop">Stop Animation</button>
+  <div id="div1"></div>
+</body>
+</html>

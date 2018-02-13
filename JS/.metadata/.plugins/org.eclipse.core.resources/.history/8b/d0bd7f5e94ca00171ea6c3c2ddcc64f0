@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+   Welcome <p id="data"></p>
+   <input type="button" id="btn" value="sign out">
+   <script>
+   $(function(){
+	   $("#id").
+   })
+   </script>
+</body>
+</html>

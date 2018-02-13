@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+      $(function(){
+          $("#theDiv").css("background","blue").css("height","300px");
+
+        // $("#slideUp").click(function(){
+        //     $("#theDiv").slideUp(2000,"easeInElastic");
+        // })
+        // $("#slideDown").click(function(){
+        //     $("#theDiv").slideDown(2000,"easeOutBounce");
+        // })
+        // $("#slideToggle").click(function(){
+        //     $("#theDiv").slideToggle(2000,"easeInElastic");
+        // })
+
+        $("#fadein").click(function(){
+            $("#theDiv").fadeIn(2000,"easeInQuart");
+        })
+        $("#fadeout").click(function(){
+            $("#theDiv").fadeOut(2000,"easeInQuart");
+        })
+        $("#fadeto3").click(function(){
+            $("#theDiv").fadeTo(2000,0.3);
+        })
+      })
+    </script>
+</head>
+<body>
+    <div id="theDiv">The Div</div>
+    <!-- <button id="slideUp">SlideUp</button>
+    <button id="slideDown">SlideDown</button>
+    <button id="slideToggle">SlideToggle</button> -->
+    <button id="fadein">Fadein</button>
+    <button id="fadeout">Fadeout</button>
+    <button id="fadeto3">Fadeto3</button>
+</body>
+</html>

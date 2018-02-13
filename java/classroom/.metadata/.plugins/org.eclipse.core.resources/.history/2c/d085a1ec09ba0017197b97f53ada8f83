@@ -1,0 +1,111 @@
+package com.psl.q1;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class Client {
+
+	public static void main(String[] args) {
+		
+		int option=0;
+	     DbConnect db=new DbConnect();
+          Connection con=db.connectionEstabish(); 
+          Statement st=null;
+          ResultSet rs=null;
+          BufferedReader br=null;
+		 do {
+			  
+		   br=new BufferedReader(new InputStreamReader(System.in));
+		   try {
+			   System.out.println("\n--------Menu--------");
+			   System.out.println("1. display data from database.");
+			   System.out.println("2. search employee with designation.");
+			   System.out.println("3. modify designation and salary.");
+			   System.out.println("4. exit");
+			   System.out.println("Enter option :");
+			    option=Integer.parseInt(br.readLine());
+			    switch(option)
+			    {
+			    case 1:
+			    	  st=con.createStatement();
+			    	  rs= st.executeQuery("select * from empdetails");
+			    	  System.out.println("Details of all employee: ");
+			    	  while(rs.next())
+			    	  {
+			    		  System.out.println(rs.getInt(1)+"  "+rs.getString(2)+"  "+rs.getString(3)+"  "+rs.getInt(4));
+			    	  }
+			    	 
+			    	break;
+			    case 2:
+			    	 System.out.println("Enter designation of employee: ");
+			    	 String designation=br.readLine();
+			    	 st=con.createStatement();
+			    	  rs= st.executeQuery("select empid,empname,empsalary from empdetails where empdesignation='"+designation+"'");
+			    	  System.out.println("Details of employee whose designation is  "+designation);
+			    	  while(rs.next())
+			    	  {
+			    		  System.out.println(rs.getInt(1)+"  "+rs.getString(2)+"  "+rs.getString(3));
+			    	  }
+			    	break;
+			    case 3:
+			    	 System.out.println("Enter  employee id whose salary and designation should be changed: ");
+			    	 int id=Integer.parseInt(br.readLine());
+			    	 st=con.createStatement();
+			    	  rs= st.executeQuery("select empid from empdetails where empid="+id);
+			    	  if(rs.next())
+			    	  {
+			    		  System.out.println("Enter new designation:");
+			    		  String des=br.readLine();
+			    		  System.out.println("Enter new salary:");
+			    		  int sal=Integer.parseInt(br.readLine());
+			    			st.executeUpdate("update empdetails set empdesignation='"+des+"',empsalary='"+sal+"' where id ="+rs.getInt(1));
+			    	  }
+			    	  else
+			    	  {
+			    		  System.out.println("Employee id does not match....");
+			    	  }
+			    	  
+			    	break;
+			    case 4:
+			    	System.exit(0);
+			    	default:
+			    		System.out.println("invalid option......!!!");
+			    }
+			
+		} catch (NumberFormatException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		   finally
+		   {
+			   try {
+				
+				rs.close();
+				st.close();
+				con.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		   }
+		} while (option!=4);
+		 
+		 try {
+			br.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

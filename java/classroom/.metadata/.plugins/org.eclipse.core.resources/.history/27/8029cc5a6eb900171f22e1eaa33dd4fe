@@ -1,0 +1,31 @@
+package com.psl.q3;
+
+public class Printer implements Runnable {
+
+	private Thread newThread;
+	Storage st=null;
+	
+	public Printer(String threadName,Storage st) {
+		// TODO Auto-generated constructor stub
+		 newThread = new Thread(this, threadName);
+	        newThread.start();  
+	        this.st=st;
+	}
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+			synchronized (newThread) {
+				System.out.println(newThread.getName()+"  :The number read and printed is :" + st.getNum());				
+			}
+				try {
+					Thread.sleep(10);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+		
+		 
+	} 
+
+}

@@ -1,0 +1,15 @@
+package com.psl;
+
+public class Performer {
+	
+	public void performerPractices()
+	{
+		System.out.println("Performer practices.....");
+	}
+	
+	public void perform()
+	{
+		System.out.println("Performer performs a song lalalala");
+	}
+
+}

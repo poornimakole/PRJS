@@ -1,0 +1,31 @@
+package com.psl.q3;
+
+public class Counter implements Runnable {
+
+	int currentValue=0;
+	private Thread newThread;
+	Storage st=null;
+
+    public Counter(String threadName,Storage st) {
+    	
+        newThread = new Thread(this, threadName); 
+        System.out.println(newThread);
+        newThread.start(); 
+        this.st=st;
+    }
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+	       
+			for (int i = 0; i < 5; i++) {
+				synchronized (newThread) {
+					st.setNum(currentValue);
+					currentValue++;
+					newThread.sleep(1000);
+				}
+			}
+		
+	}
+
+}

@@ -1,0 +1,218 @@
+package com.psl.q3;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.Period;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Locale;
+import java.util.Set;
+import java.util.StringTokenizer;
+import java.util.TreeSet;
+
+public class Client {
+
+	private  void addContact(Contact c, List<Contact> cList) {
+		// TODO Auto-generated method stub
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		
+		try {
+
+			System.out.print("Enter Contact ID: ");
+			c.setContactID(Integer.parseInt(br.readLine()));
+			
+			System.out.println("Enter Contact Name: ");
+			c.setContactName(br.readLine());
+			
+			System.out.println("Enter email id: ");
+			c.setEmailAddress(br.readLine());
+			
+			System.out.println("Enter no. of contact numbers");
+			int n=Integer.parseInt(br.readLine());
+			
+			List<String> cNum=new ArrayList<String>();
+			for (int i = 0; i < n; i++) {
+				System.out.println("Enter number :");
+				cNum.add(br.readLine());
+			}
+			 c.setContactNumber(cNum);
+			  cList.add(c);
+		} catch (NumberFormatException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
+	}
+	
+	
+	private void removeContact(Contact c, List<Contact> cList) throws ContactNotFoundException {
+		// TODO Auto-generated method stub
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		boolean flag=false;
+	     try {
+	    	 System.out.print("Enter Contact ID: ");
+			int id=Integer.parseInt(br.readLine());
+			Iterator<Contact> itr=cList.iterator();
+			while(itr.hasNext())				
+			{
+               c=itr.next();
+               if(c.getContactID()==id)
+               {
+            	   itr.remove();
+            	   flag=true;
+            	   break;
+               }
+			}
+			 if(!flag)
+			 {
+				 throw new ContactNotFoundException();
+			 }
+		} catch (NumberFormatException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	Contact searchContactByName(String name, List<Contact> contact) throws ContactNotFoundException
+	{
+		boolean flag=false;
+		Contact c=null;
+	     try {
+			Iterator<Contact> itr=contact.iterator();
+			while(itr.hasNext())				
+			{
+             c=itr.next();
+              if(c.getContactName().equals(name))
+              {
+           	   flag=true;
+           	   break;
+              }
+			}
+			 if(!flag)
+			 {
+				 throw new ContactNotFoundException();
+			 }
+		} catch (NumberFormatException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+		return c;
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		Client cl=new Client();
+		List<Contact> cList=new ArrayList<Contact>();
+		Set<Contact> cSet=new TreeSet<Contact>();
+		Contact c=null;
+		int option=0; 
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		do
+		{
+			System.out.println("......MENU.......");
+			System.out.println("1. Add Contact");
+			System.out.println("2. Remove Contact");
+			System.out.println("3. search Contact By Name");
+			System.out.println("4. Search Contact By Number");
+			System.out.println("5. Add Contact Number");
+			System.out.println("6. Sort Contacts By Name");
+			System.out.println("7. Read Contacts From File");
+			System.out.println("8. Serialize Contact Details");
+			System.out.println("9. Deserialize Contact");
+			System.out.println("10 Populate Contact From Db");
+			System.out.println("11 add Contacts from set to list");
+			System.out.println("12. Exit");
+			System.out.println("Select option:");
+			try {
+				option=Integer.parseInt(br.readLine());
+			} catch (NumberFormatException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			switch(option)
+			{
+			case 1:
+				
+					c=new Contact();
+					cl.addContact(c,cList);
+				break;
+			case 2:
+				    c=new Contact();
+				try {
+					cl.removeContact(c,cList);
+				} catch (ContactNotFoundException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+				break;
+			case 3:
+				System.out.println("Enter  Name: ");
+				String name;
+				try {
+					name = br.readLine();
+					c=cl.searchContactByName(name, cList);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (ContactNotFoundException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+				
+				break;
+			case 4:
+				
+				break;
+			case 5:
+				  
+				break;
+			case 6:
+				break;
+			case 7:
+				break;
+			case 8:
+				break;
+			case 9:
+				break;
+			case 10:
+				break;
+			case 11:
+				break;
+			case 12:
+				System.exit(0);
+				default:
+					System.out.println("Invalid option...!!!");
+			}
+			
+		}while(option !=6);
+	}
+
+
+	
+
+	
+	
+}
+

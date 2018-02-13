@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       var person1={firstname:"john",city:"pune"};
+       var person2={firstname:"vansh",city:"goa"};
+       var sayHello=function()
+       {
+           alert("Hello "+this.firstname+" from "+this.city);
+       }
+
+      sayHello.call(person1);
+    </script>
+</body>
+</html>

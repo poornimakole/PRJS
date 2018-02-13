@@ -1,0 +1,14 @@
+package com.psl.dao;
+
+import java.util.List;
+
+import com.psl.bean.Employee;
+import com.psl.bean.User;
+
+public interface IUserDAO {
+
+	void createEmployee(User u);
+	List<User> getAllEmployee();
+	void updateEmployee(int id,String name);
+	void deleteEmployee(User e);
+}

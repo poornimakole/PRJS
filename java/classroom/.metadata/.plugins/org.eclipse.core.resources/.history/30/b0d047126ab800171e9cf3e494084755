@@ -1,0 +1,220 @@
+package com.psl.q1;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.sql.Array;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class Client {
+	
+	private void insertRecords() {
+		// TODO Auto-generated method stub
+		DbConnect db=new DbConnect();
+		 Connection con=db.connectionEstabish();
+		   Statement st=null;
+		try {
+			st = con.createStatement();
+			 st.addBatch("insert into emp values(1,'asmi','develo',231,'2014-10-23',40000,29000,03)");
+		     st.addBatch("insert into emp values(2,'sita','test',453,'2012-06-04',30000,6987,10)");
+			 st.addBatch("insert into emp values(3,'ved','hr',978,'2013-02-12',60000,4362,15)");
+		     st.addBatch("insert into emp values(4,'vansh','admin',775,'2010-06-22',35000,4452,18)");
+			 st.addBatch("insert into emp values(5,'vardh','trans',354,'2011-09-03',45000,1334,05)");
+		     st.addBatch("insert into emp values(6,'gita','sen sw',296,'2004-06-04',60000,8986,01)");
+			 st.addBatch("insert into emp values(7,'pooja','sw',432,'2013-02-02',55000,4364,07)");
+		     st.addBatch("insert into emp values(8,'nidhi','test',678,'2012-11-14',37000,3367,10)");
+			 st.addBatch("insert into emp values(9,'niti','develo',995,'2000-03-29',50000,9343,03)");
+		     st.addBatch("insert into emp values(10,'veda','develo',396,'2017-06-18',66000,4141,03)");		    
+		     st.executeBatch();
+		     System.out.println("data inserted successfully....");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	    
+		
+	}
+	
+	
+	private void displayFirstFiveRecord() {
+		// TODO Auto-generated method stub
+		DbConnect db=new DbConnect();
+		 Connection con=db.connectionEstabish();
+		 Statement st=null;
+		try {
+			st = con.createStatement();
+			  ResultSet rs= st.executeQuery("select * from emp");
+			  int count=1;
+			  while(count<=5)
+			  {
+				  rs.next();
+				  System.out.println(rs.getInt(1)+"  "+rs.getString(2)+"  "+rs.getString(3)+"  "+rs.getInt(4)+"  "+rs.getDate(5)+"  "+rs.getInt(6)+"  "+rs.getInt(7)+"  "+rs.getInt(8));
+			      count++;
+			  }
+			  
+			 
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+	private void NumberOfRecords() {
+		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub
+				DbConnect db=new DbConnect();
+				 Connection con=db.connectionEstabish();
+				 Statement st=null;
+				try {
+					st = con.createStatement();
+					  ResultSet rs= st.executeQuery("select * from emp");
+					  int count=0;
+					  while(rs.next())
+					  {						  
+						  count++;
+					  }
+					  System.out.println("Number of records in table is "+count);
+					  
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+		
+	}
+	
+	private void displayDetail() {
+		// TODO Auto-generated method stub
+		DbConnect db=new DbConnect();
+		 Connection con=db.connectionEstabish();
+		 Statement st=null;
+		 BufferedReader br=null;
+		try {
+			br=new BufferedReader(new InputStreamReader(System.in));
+			System.out.println("Enter employee id:");
+			int id=Integer.parseInt(br.readLine());
+			st = con.createStatement();
+			  ResultSet rs= st.executeQuery("select * from emp where empno ="+id);
+			  boolean flag=false;
+			  while(rs.next())
+			  {						  
+				  System.out.println(rs.getInt(1)+"  "+rs.getString(2)+"  "+rs.getString(3)+"  "+rs.getInt(4)+"  "+rs.getDate(5)+"  "+rs.getInt(6)+"  "+rs.getInt(7)+"  "+rs.getInt(8));
+				   flag=true;  
+			  }
+			  
+			  if(!flag)
+			  {
+				  System.out.println("no data found...!!!");
+			  }
+			  
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (NumberFormatException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+
+	private void updateSalary() {
+		// TODO Auto-generated method stub
+		 DbConnect db=new DbConnect();
+		 Connection con=db.connectionEstabish();
+		 Statement st=null;
+		 BufferedReader br=null;
+		try {
+			br=new BufferedReader(new InputStreamReader(System.in));
+			System.out.println("Enter employee id:");
+			int id=Integer.parseInt(br.readLine());
+			st = con.createStatement();
+			  ResultSet rs= st.executeQuery("select sal from emp where empno ="+id);
+			  boolean flag=false;
+			  while(rs.next())
+			  {						  
+				  System.out.println("Original salary is: "+rs.getString(1));
+				  System.out.println("Enter new Salary:");
+				  int sal=Integer.parseInt(br.readLine());
+				  st.executeUpdate("update emp set sal="+sal+"where id="+id);
+				  System.out.println("Salary is updated...!!!");
+				   flag=true;  
+			  }
+			  
+			  if(!flag)
+			  {
+				  System.out.println("no data found...!!!");
+			  }
+			  
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (NumberFormatException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+	public static void main(String[] args) {
+		
+		Client c=new Client();
+		
+		int option=0;
+        BufferedReader br=null;
+        do
+        {
+        	System.out.println("-------Menu-------");
+        	System.out.println("1.Insert 10 records. ");
+        	System.out.println("2. display first 5 records.");
+            System.out.println("3.Calculate number of records.");
+            System.out.println("4.display detail of employee.");
+            System.out.println("5.update salary of employee.");
+            System.out.println("6.exit.");
+            System.out.println("select option:");
+              br=new BufferedReader(new InputStreamReader(System.in));
+             try {
+				option=Integer.parseInt(br.readLine());
+			} catch (NumberFormatException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+             
+             switch(option)
+             {
+             case 1:
+            	 c.insertRecords();
+            	 break;
+             case 2:
+            	 c.displayFirstFiveRecord();
+            	 break;
+             case 3:
+            	 c.NumberOfRecords();
+            	 break;
+             case 4:
+            	c.displayDetail();
+            	 break;
+             case 5:
+            	 c.updateSalary();
+            	 break;
+             case 6:
+            	  System.exit(0);
+            	 default:
+            		 System.out.println("Invalid option.....!!!");
+             }
+            
+        }while(option!=6);
+	}
+
+}

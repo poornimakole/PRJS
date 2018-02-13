@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<table>
+		<tr>
+			<td>
+				<button id="b1">Get Personal Details</button>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<button id="b2">Get Project details</button>
+			</td>
+		</tr>
+		<tr>
+			<td><input type="text" id="firstname" />FirstName</td>
+		</tr>
+		<tr>
+			<td><input type="text" id="lastname" />lastName</td>
+		</tr>
+		<tr>
+			<td><input type="text" id="city" />City</td>
+		</tr>
+		<tr>
+			<td><input type="text" id="contact" />Contact</td>
+		</tr>
+		<tr>
+			<td><input type="text" id="pid" />project id</td>
+		</tr>
+		<tr>
+			<td><input type="text" id="ploc" />Project Location</td>
+		</tr>
+	</table>
+	<script>
+		document.getElementById("b1").addEventListener(
+				"click",
+				function() {
+					xml = new XMLHttpRequest();
+					var url = "requestXML.jsp";
+					xml.open("POST", url, true);
+					xml.setRequestHeader("Content-Type",
+							"application/x-www-form-urlencoded");
+					xml.onreadystatechange = handleResponseXML;
+					xml.send();
+				}, true);
+		function handleResponseXML() {
+			if (xml.readyState == 4 && xml.status == 200) {
+				var response = xml.responseXML;
+				console.log(response);
+				var x = response.getElementsByTagName("data");
+				document.getElementById("firstname").value = x[0]
+						.getElementsByTagName('firstname')[0].childNodes[0].nodeValue;
+				document.getElementById("lastname").value = (x[0]
+						.getElementsByTagName("lastname")[0].childNodes[0].nodeValue);
+				document.getElementById("city").value = x[0]
+						.getElementsByTagName('city')[0].childNodes[0].nodeValue;
+				document.getElementById("contact").value = (x[0]
+						.getElementsByTagName("contact")[0].childNodes[0].nodeValue);
+
+			}
+
+		}
+		document.getElementById("b2").addEventListener("click", function() {
+	
+			xml=new XMLHttpRequest();
+			
+			 var url="requestJSON.jsp";
+			 xml.open("GET",url,true);
+			 xml.onreadystatechange=handleResponseJSON;
+			 
+			 xml.send();
+		}, true);
+		function handleResponseJSON(){
+			if(xml.readyState==4 && xml.status==200){
+				var response=xml.responseText;
+				console.log(response);
+				var str=JSON.parse(response);
+				console.log(str);
+				document.getElementById("pid").value=str.pid;
+				document.getElementById("ploc").value=str.ploc;
+			
+			}
+			
+		}	
+	</script>
+</body>
+</html>

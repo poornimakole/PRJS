@@ -1,0 +1,35 @@
+package com.psl;
+
+public class Audiance {
+
+	public void takeSeats(){
+		System.out.println("Audiance take seats");
+	}
+	
+	public void switchOffPhones(){
+		System.out.println("Audiance switch off phones");
+	}
+	
+	public void demandRefund(){
+		System.out.println("Audiance demand a refund");
+	}
+	
+	public void applaud()
+	{
+		System.out.println("Audiance claps");
+	}
+	
+	public void goHome(){
+		System.out.println("Audiance went home");
+	}
+	
+	public void record(){
+		//Before
+		
+		
+		//during
+		
+		
+		//After
+	}
+}

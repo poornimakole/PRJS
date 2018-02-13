@@ -1,0 +1,41 @@
+package com.psl.dao;
+
+import java.util.List;
+
+import org.springframework.jdbc.core.support.JdbcDaoSupport;
+
+import com.psl.bean.User;
+
+public class UserDAOImpl extends JdbcDaoSupport implements IUserDAO{
+
+	@Override
+	public void createUser(User u) {
+		// TODO Auto-generated method stub
+           String sql="insert into bank values("+u.getAccount_no()+",'"+u.getName()+"',"+u.getAmount()+")";
+		
+		System.out.println(sql);
+		getJdbcTemplate().update(sql);
+	}
+
+	@Override
+	public List<User> miniStatement() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void depositAmount(User u, int amount) {
+		// TODO Auto-generated method stub
+         String sql="insert into transaction values("+u.getAccount_no()+",'"+u.getName()+"',"+u.getAmount()+")";
+		
+		System.out.println(sql);
+		getJdbcTemplate().update(sql);
+	}
+
+	@Override
+	public void withdrawAmount(int account_no, int amount) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

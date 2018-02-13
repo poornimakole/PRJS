@@ -1,0 +1,14 @@
+package com.psl.q2;
+
+public class Customer {
+
+	int customerId;	
+	String customerName;	
+	int isd_call_duration;
+	double isd_per_min;
+	int std_call_duration;
+	double std_per_min;
+	int local_call_duration;
+	double local_per_min;	
+
+}

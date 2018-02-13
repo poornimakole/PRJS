@@ -1,0 +1,8 @@
+package com.psl;
+
+public class Audiance {
+
+	public void takeSeats(){
+		System.out.println("Audiance take seats");
+	}
+}

@@ -1,0 +1,28 @@
+package com.psl.q2;
+
+public class ThreadInThread extends Thread {
+
+	Integer i=1;
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		while(i<=100)
+		{
+			i=Integer.parseInt(Thread.currentThread().getName());
+			i++;
+			
+			new Thread(this,i.toString()).start();
+			System.out.println("Hello this is Thread "+(i-1));
+		}
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		 
+		ThreadInThread tit=new ThreadInThread();
+		
+		Thread t1=new Thread(tit,"1");
+		t1.start();
+	}
+}

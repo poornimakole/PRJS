@@ -1,0 +1,25 @@
+package com.tienda.resource;
+
+import java.util.Set;
+
+import com.tienda.bean.Order;
+
+public class OrderResource {
+
+	public Order fetchOrderDetailsForUser(String username,String number)
+	{
+		return null;
+			
+	}
+	
+	public Set<Order> fetchAllOrdersForUser(String username)
+	{
+		return null;
+	
+	}
+	
+	public void create(Order order)
+	{
+		
+	}
+}

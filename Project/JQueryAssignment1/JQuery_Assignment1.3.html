@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script  src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script>
+
+        $(function(){
+            $("form :input").focusin(function(){
+                $(this).css("background","yellow");
+            })
+
+            $("form :input").focusout(function(){
+                $(this).css("background","white");
+            })
+            
+        })
+    </script>
+</head>
+<body>
+    <form action="" method="post">
+        <table>
+            <tbody>
+                    <tr>
+                            <td class="style2">
+                                First Name
+                            </td>
+                            <td>
+                                <input id="FirstName" type="text"/>
+                            </td>
+                        </tr>
+                        <tr>
+                                <td class="style2">
+                                    Middle Name
+                                </td>
+                                <td>
+                                    <input id="MiddleName" type="text" disabled="disabled"/>
+                                </td>
+                        </tr>
+                        <tr>
+                                    <td class="style2">
+                                        Last Name
+                                    </td>
+                                    <td>
+                                        <input id="LastName" type="text"/>
+                                    </td>
+                        </tr>
+                        <tr>
+                                        <td class="style2">
+                                            Address
+                                        </td>
+                                        <td>
+                                            <input id="Address" type="text"/>
+                                        </td>
+                        </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>

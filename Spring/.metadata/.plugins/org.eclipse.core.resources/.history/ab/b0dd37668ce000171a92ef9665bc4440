@@ -1,0 +1,29 @@
+package com.psl;
+
+public class Performer {
+	//Join point
+	public void performerPractices()
+	{
+		System.out.println("Performer practices.....");
+	}
+	
+	//point cut
+	public void perform()
+	{
+		System.out.println("Performer performs a song lalalala");
+		int a=5/0;
+	}
+	
+	public void hasSupper(){
+		System.out.println("performer has supper");
+	}
+	
+	public void giveAutographs(){
+		System.out.println("Performers gives autographs");
+	}
+	
+	public void catchesFlight(){
+		System.out.println("Performers catches Flight");
+	}
+
+}

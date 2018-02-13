@@ -1,0 +1,72 @@
+package com.psl.q5;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+public class SearchThread extends Thread {
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		      File f=new File("input.txt");
+		      try {
+		    	  boolean flag=false;
+				FileInputStream fis=new FileInputStream(f);
+				BufferedReader br=new BufferedReader(new InputStreamReader(fis));
+				String data=null;
+				  while((data=br.readLine())!=null)
+				  {
+					  StringTokenizer st=new StringTokenizer(data," ");
+					   while(st.hasMoreTokens())
+					   {
+						   if(st.nextToken().equals(Thread.currentThread().getName()))
+						   {
+							   flag=true;
+							   break;
+						   }
+						   if(flag)
+						   {
+							   break;
+						   }
+					   }
+					   if(flag)
+					   {
+						   System.out.println(Thread.currentThread().getName()+" : is present.");
+					   }
+					   else
+					   {
+						   System.out.println(Thread.currentThread().getName()+" : is absent.");
+					   }
+				  }
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		      
+	    }
+	
+	
+	public static void main(String[] args) {
+		
+		SearchThread st=new SearchThread();
+		Thread t1=new Thread(st,args[0]);
+		Thread t2=new Thread(st,args[1]);
+		Thread t3=new Thread(st,args[2]);
+		Thread t4=new Thread(st,args[3]);
+		
+		
+		t1.start();
+		t2.start();
+		t3.start();
+		t4.start();
+	}
+
+}

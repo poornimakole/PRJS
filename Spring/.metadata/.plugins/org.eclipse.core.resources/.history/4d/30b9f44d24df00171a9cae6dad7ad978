@@ -1,0 +1,43 @@
+package com.psl;
+
+public class Address {
+	
+	private String stret;
+	private String city;
+	private String zip;
+	public Address(String stret, String city, String zip) {
+		
+		this.stret = stret;
+		this.city = city;
+		this.zip = zip;
+	}
+	public String getStret() {
+		return stret;
+	}
+	public void setStret(String stret) {
+		this.stret = stret;
+	}
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+	public String getZip() {
+		return zip;
+	}
+	public void setZip(String zip) {
+		this.zip = zip;
+	}
+	
+	@Override
+	public String toString() {
+		return "Address [stret=" + stret + ", city=" + city + ", zip=" + zip
+				+ "]";
+	}
+	
+	
+	
+	
+
+}

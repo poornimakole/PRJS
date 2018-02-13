@@ -1,0 +1,21 @@
+package com.app.main;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+
+public class Client {
+	
+	public static void main(String[] args) {
+		SessionFactory sessionfactory=new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
+	    
+		Session session=sessionfactory.openSession();
+		session.beginTransaction();
+		
+		session.getTransaction().commit();
+		session.close();
+		sessionfactory.close();
+	}
+
+}

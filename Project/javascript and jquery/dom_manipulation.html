@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script>
+       $(function(){
+           //to get text content
+           //alert($("#list1").text());
+           //to get the html content
+          // alert($("#list1").html());
+          //to set the text 
+          //$("#list2").text("<li>This is new list item</li>");
+          //to set the html content
+          //$("#list2").html("<li>This is new list item</li>");
+           //$("p:last").text("This is a new para");
+           //elements on the fly
+            //    var myPara=$("<p>This is new para</p>");
+            //    $("#para3").html(myPara);
+
+            //$("#para3").append(" with dynamic text");
+            //$("#para1").appendTo("p:last");
+
+            //attributes
+            //$("a").attr('target','_blank');
+            //$("a").attr('target','_self');
+
+            //$("a").removeAttr("href");
+            //$("#button").click( function(){$("img").attr("src","hp2.jpg") })
+
+            //wrapping 
+           // $("p").wrap("<div style='border:3px solid blue'></div>")
+
+            //$("p").wrapAll("<div style='border:3px solid blue'></div>")
+       
+            //$("ul").empty();
+            //$("ul").remove();
+
+            //$("#para3").clone().appendTo("#para1");
+            //$("#para3").replaceWith("<p>This is replaced para</p>");
+            //$("#para3").replaceWith($('#para1'));
+            //$("#para3").replaceWith($('#para1').clone());
+
+            // var elems=$("li").get();
+            // alert(elems.length);
+
+            $("ul").find("li.b").css("border","3px solid blue")
+
+    
+       })
+    </script>
+</head>
+<body>
+   <a href="hp1.jpg"><img src="hp1.jpg"></a> 
+   <button id="button">Change</button>
+   <ul id="list2"></ul>
+   <ul id="list1">
+       <li class="a">item 1</li>
+       <li class="a">item 2</li>
+       <li class="b">item 3</li>
+       <li class="b">item 4</li>
+   </ul>
+   <p id="para1" class="a">This is para 1</p>
+   <p>This is para 2</p>
+   <ul id="list3">
+       <li>item1</li>
+       <li>item2</li>
+   </ul>
+   <p id="para3" class="b">This is para 3</p>
+   <p class="b">This is para 4</p>
+
+  
+</body>
+</html>

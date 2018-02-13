@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="DataAccessDemo"/>
+<aop-project name="TrainAOPProject">
+<aspect-definition advice-class-name="com.psl.TicketCollector" advice-method-name="checkingTicket(org.aspectj.lang.ProceedingJoinPoint)" advice-type="AROUND" aspect-end-line-number="9" aspect-name="ticketCollector" aspect-start-line-number="9" factory-id="org.springframework.ide.eclipse.aop.core.annotationAspectDefinitionElementFactory" file="/TrainAOPProject/src/spring.xml" pointcut-expression="tc1()" proxy-target-class="false">
+<aop-reference advice-type="AROUND" bean="1:BeansModel|2:TrainAOPProject|3:src/spring.xml|7:beans:6|8:train:8" bean-file="/TrainAOPProject/src/spring.xml" bean-start-line="8" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/TrainAOPProject/src/spring.xml" source="=TrainAOPProject/src&lt;com.psl{TicketCollector.java[TicketCollector~checkingTicket~QProceedingJoinPoint;" source-start-line="15" target="=TrainAOPProject/src&lt;com.psl{Train.java[Train~trainRunOnTime" target-start-line="5"/>
+</aspect-definition>
+</aop-project>
+<aop-project name="FirstDemo"/>
+<aop-project name="SpringMVC"/>
+<aop-project name="TrainTicketBooking"/>
+<aop-project name="ShoppingAOP">
+<aspect-definition advice-class-name="com.psl.Suggestion" advice-method-name="help(org.aspectj.lang.ProceedingJoinPoint)" advice-type="AROUND" aspect-end-line-number="9" aspect-name="suggestion" aspect-start-line-number="9" factory-id="org.springframework.ide.eclipse.aop.core.annotationAspectDefinitionElementFactory" file="/ShoppingAOP/src/spring.xml" pointcut-expression="suggest()" proxy-target-class="false">
+<aop-reference advice-type="AROUND" bean="1:BeansModel|2:ShoppingAOP|3:src/spring.xml|7:beans:6|8:order:8" bean-file="/ShoppingAOP/src/spring.xml" bean-start-line="8" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/ShoppingAOP/src/spring.xml" source="=ShoppingAOP/src&lt;com.psl{Suggestion.java[Suggestion~help~QProceedingJoinPoint;" source-start-line="16" target="=ShoppingAOP/src&lt;com.psl{Order.java[Order~placeOrder" target-start-line="5"/>
+</aspect-definition>
+</aop-project>
+<aop-project name="AOPDemo">
+<aspect-definition advice-class-name="com.psl.Audiance" advice-method-name="applaud(java.lang.String, java.lang.String)" advice-type="AFTER_RETURNING" aspect-end-line-number="9" aspect-name="audiance" aspect-start-line-number="9" factory-id="org.springframework.ide.eclipse.aop.core.annotationAspectDefinitionElementFactory" file="/AOPDemo/src/spring.xml" pointcut-expression="pc1(song,artist)" proxy-target-class="false">
+<aop-reference advice-type="AFTER_RETURNING" bean="1:BeansModel|2:AOPDemo|3:src/spring.xml|7:beans:6|8:performer:8" bean-file="/AOPDemo/src/spring.xml" bean-start-line="8" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/AOPDemo/src/spring.xml" source="=AOPDemo/src&lt;com.psl{Audiance.java[Audiance~applaud~QString;~QString;" source-start-line="35" target="=AOPDemo/src&lt;com.psl{Performer.java[Performer~perform~QString;~QString;" target-start-line="11"/>
+</aspect-definition>
+<aspect-definition advice-class-name="com.psl.Audiance" advice-method-name="switchOffPhones(java.lang.String, java.lang.String)" advice-type="BEFORE" aspect-end-line-number="9" aspect-name="audiance" aspect-start-line-number="9" factory-id="org.springframework.ide.eclipse.aop.core.annotationAspectDefinitionElementFactory" file="/AOPDemo/src/spring.xml" pointcut-expression="pc1(song,artist)" proxy-target-class="false">
+<aop-reference advice-type="BEFORE" bean="1:BeansModel|2:AOPDemo|3:src/spring.xml|7:beans:6|8:performer:8" bean-file="/AOPDemo/src/spring.xml" bean-start-line="8" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/AOPDemo/src/spring.xml" source="=AOPDemo/src&lt;com.psl{Audiance.java[Audiance~switchOffPhones~QString;~QString;" source-start-line="25" target="=AOPDemo/src&lt;com.psl{Performer.java[Performer~perform~QString;~QString;" target-start-line="11"/>
+</aspect-definition>
+<aspect-definition advice-class-name="com.psl.Audiance" advice-method-name="goHome(java.lang.String, java.lang.String)" advice-type="AFTER" aspect-end-line-number="9" aspect-name="audiance" aspect-start-line-number="9" factory-id="org.springframework.ide.eclipse.aop.core.annotationAspectDefinitionElementFactory" file="/AOPDemo/src/spring.xml" pointcut-expression="pc1(song,artist)" proxy-target-class="false">
+<aop-reference advice-type="AFTER" bean="1:BeansModel|2:AOPDemo|3:src/spring.xml|7:beans:6|8:performer:8" bean-file="/AOPDemo/src/spring.xml" bean-start-line="8" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/AOPDemo/src/spring.xml" source="=AOPDemo/src&lt;com.psl{Audiance.java[Audiance~goHome~QString;~QString;" source-start-line="41" target="=AOPDemo/src&lt;com.psl{Performer.java[Performer~perform~QString;~QString;" target-start-line="11"/>
+</aspect-definition>
+<aspect-definition advice-class-name="com.psl.Audiance" advice-method-name="takeSeats(java.lang.String, java.lang.String)" advice-type="BEFORE" aspect-end-line-number="9" aspect-name="audiance" aspect-start-line-number="9" factory-id="org.springframework.ide.eclipse.aop.core.annotationAspectDefinitionElementFactory" file="/AOPDemo/src/spring.xml" pointcut-expression="pc1(song,artist)" proxy-target-class="false">
+<aop-reference advice-type="BEFORE" bean="1:BeansModel|2:AOPDemo|3:src/spring.xml|7:beans:6|8:performer:8" bean-file="/AOPDemo/src/spring.xml" bean-start-line="8" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/AOPDemo/src/spring.xml" source="=AOPDemo/src&lt;com.psl{Audiance.java[Audiance~takeSeats~QString;~QString;" source-start-line="20" target="=AOPDemo/src&lt;com.psl{Performer.java[Performer~perform~QString;~QString;" target-start-line="11"/>
+</aspect-definition>
+<aspect-definition advice-class-name="com.psl.Audiance" advice-method-name="demandRefund(java.lang.String, java.lang.String)" advice-type="AFTER_THROWING" aspect-end-line-number="9" aspect-name="audiance" aspect-start-line-number="9" factory-id="org.springframework.ide.eclipse.aop.core.annotationAspectDefinitionElementFactory" file="/AOPDemo/src/spring.xml" pointcut-expression="pc1(song,artist)" proxy-target-class="false">
+<aop-reference advice-type="AFTER_THROWING" bean="1:BeansModel|2:AOPDemo|3:src/spring.xml|7:beans:6|8:performer:8" bean-file="/AOPDemo/src/spring.xml" bean-start-line="8" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/AOPDemo/src/spring.xml" source="=AOPDemo/src&lt;com.psl{Audiance.java[Audiance~demandRefund~QString;~QString;" source-start-line="30" target="=AOPDemo/src&lt;com.psl{Performer.java[Performer~perform~QString;~QString;" target-start-line="11"/>
+</aspect-definition>
+</aop-project>
+<aop-project name="ATMMachineProject"/>
+</aop-reference-model>

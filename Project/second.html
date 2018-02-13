@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+        <h1>Welcome <span id="data"></span></h1>
+        <ul>
+            <li>item1</li>
+            <li>item2</li>
+            <li>item3</li>
+            <li>item4</li>
+            <li>item5</li>
+            <li>item6</li>
+        </ul>
+        <div id="items">You Selected:<br></div>
+        <input type="button" id="btn" value="sign out">
+        <script>
+        $(function(){
+            $("#data").text(localStorage.getItem('name'));
+             
+            var l="";
+            var i=1;
+            while(i<=$("li").length)
+            {
+                l=l+$("ul li:nth-child("+i+")").text()+" ";
+                i++;
+            }
+            localStorage.items=l;
+            var a="";
+            $("ul li").click(function(){
+                var v=$(this).text();
+              
+                $("#items").append(v+"<br>");
+                a=a+v+" " ;
+                sessionStorage.items=a;
+            })
+
+            $("#btn").click(function(){
+                window.location.href="Html_css_Assignment3.1.html";	
+            })
+        })
+        </script>
+</body>
+</html>

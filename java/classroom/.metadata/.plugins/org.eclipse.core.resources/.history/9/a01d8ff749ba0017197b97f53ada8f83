@@ -1,0 +1,45 @@
+package com.psl.q3;
+
+import java.io.Serializable;
+import java.util.List;
+
+public class Contact implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6679945705797867099L;
+	
+	int contactID;
+	String ContactName;
+	String emailAddress;
+	List<String> contactNumber;
+	
+	
+	public int getContactID() {
+		return contactID;
+	}
+	public void setContactID(int contactID) {
+		this.contactID = contactID;
+	}
+	public String getContactName() {
+		return ContactName;
+	}
+	public void setContactName(String contactName) {
+		ContactName = contactName;
+	}
+	public String getEmailAddress() {
+		return emailAddress;
+	}
+	public void setEmailAddress(String emailAddress) {
+		this.emailAddress = emailAddress;
+	}
+	public List<String> getContactNumber() {
+		return contactNumber;
+	}
+	public void setContactNumber(List<String> contactNumber) {
+		this.contactNumber = contactNumber;
+	}
+
+	
+}

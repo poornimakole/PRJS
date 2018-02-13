@@ -1,0 +1,93 @@
+package com.psl.q1;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.StringTokenizer;
+import java.util.regex.Pattern;
+
+
+public class Client {
+
+	
+	ArrayList<CustomerBill> getCustomerDetails(String fileName)
+	{
+		ArrayList<CustomerBill> customerBill=new ArrayList<CustomerBill>();
+		CustomerBill cb=new CustomerBill();
+		File f=new File(fileName);
+		FileInputStream fis=null;
+		BufferedReader br=null;
+		StringTokenizer st=null;
+		
+		try {
+			fis = new FileInputStream(f);
+			br=new BufferedReader(new InputStreamReader(fis));
+			String data=null;
+			while((data=br.readLine())!=null)
+					{
+				       st=new StringTokenizer(data,"\t");
+				       if(st.countTokens()!=4)
+				       {
+				    	   throw new NoDataFoundException("Data is incomplete...!!!");
+				       }
+				       String name=st.nextToken();
+				       String month=st.nextToken().toLowerCase();
+				       String p=st.nextToken();
+				       String fud=st.nextToken();
+				       String decimalPattern = "([0-9]*)\\.([0-9]*)";
+				       boolean match1 = Pattern.matches(decimalPattern,p);
+				       boolean match2 = Pattern.matches(decimalPattern,fud);
+				       
+				       if(Double.parseDouble(p)<0 ||Double.parseDouble(fud)<0 ||(!match1) ||(!match2))
+				       {
+				    	   throw new InvalidDataException("Data is not in proper format....!!!");
+				       }
+				       else
+				       {	
+				    	   cb.setCustomerName(name);
+				       	   cb.setTravelMonth(month);
+				    	   cb.setPackages(Double.parseDouble(p));
+					       cb.setFood(Double.parseDouble(fud));
+				       }
+					}
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (NoDataFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (InvalidDataException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		finally
+		{
+			try {
+				br.close();
+				fis.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}
+		
+		return null;
+		
+	}
+
+
+	public static void main(String[] args) {
+		
+		Client c=new Client();
+		ArrayList<CustomerBill> customerBill =c.getCustomerDetails("customer.txt");
+		
+	}
+}

@@ -1,0 +1,11 @@
+package com.psl.q2;
+
+public class Store {
+
+	int itemId;
+	String itemName;
+	Grocery itemType;
+	int itemQuantity;
+	float itemPrice;
+
+}

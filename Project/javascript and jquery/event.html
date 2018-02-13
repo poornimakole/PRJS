@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- obstrusive approach -->
+    <!-- <p id="myPara" onclick="alert('hii i am clicked')">This is a para</p> -->
+    <p id="myPara">This is a new para</p>
+    <script>
+    //unobstrusive approach
+    var para =document.getElementById("myPara");
+    // para.onclick=clicked;
+
+    // function clicked()
+    // {
+    //     alert("i am clicked..");
+    // }
+document.ge
+    para.addEventListener("click",sayHello,true);
+    para.addEventListener("click",sayBye,true); 
+
+    function sayHello()
+    {
+        alert("helllooo...");
+    }
+
+    function sayBye()
+    {
+        alert("bye...");
+    }
+    </script>
+</body>
+</html>

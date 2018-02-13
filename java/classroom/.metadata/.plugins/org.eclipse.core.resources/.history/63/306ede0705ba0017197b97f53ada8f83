@@ -1,0 +1,11 @@
+package com.psl.q1;
+
+public class Client {
+
+	public static void main(String[] args) {
+		
+	   System.out.println("--------Menu--------");
+	   System.out.println("1. display data from database.");
+	   System.out.println("2. search employee with designation.");
+	}
+}

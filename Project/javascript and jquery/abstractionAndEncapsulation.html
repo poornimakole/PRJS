@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     function Employee(n)
+     {
+         var name=n;
+         this.id=12;
+         var priFun=function()  //private function
+         {
+            return name;
+         }
+         this.pubFun=function()          //public function
+         {
+            return priFun();      //privilage
+         }
+     }
+
+     var emp1=new Employee("john");
+     alert(emp1.pubFun());
+    </script>
+</body>
+</html>

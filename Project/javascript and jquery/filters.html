@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script>
+       $(document).ready(function(){
+        //    $("p:even").css("border","2px solid yellow");
+        //    $("p:odd").css("border","2px solid red");
+          // $("p:first").css("border","2px solid blue");
+          // $("p:last").css("border","2px solid green");
+        //   $("p:gt(1)").css("border","2px solid green");
+        //   $("p:lt(1)").css("border","2px solid red");
+        //   $("p:eq(1)").css("border","2px solid blue");
+         // $("p:not(p:eq(3))").css("border","2px solid yellow");
+
+
+         //attribute filters
+
+       //  $("p[class]").css("border","2px solid blue");
+       //  $("p[class=a]").css("border","2px solid blue");
+       //$("p[id]").css("border","2px solid blue");
+       //starts with
+       //$("p[id^=pa]").css("border","2px solid blue");
+       //ends with
+       //$("p[id$=ra1]").css("border","2px solid blue");
+       //contains
+       //$("p[id*=ra]").css("border","2px solid blue");
+       $("p[id=para3][lang=en-us]").css("border","2px solid blue");
+       }) 
+    </script>
+</head>
+<body>
+        <ul id="list1">
+            <li class="a">item1</li>
+            <li class="a">item2</li>
+            <li class="b">item3</li>
+            <li class="b">item4</li>
+        </ul>
+    
+        <p id="para1" class="a">This is paragraph1!</p>
+        <p class="b">This is paragraph2!</p>
+        <p id="para3" class="b" lang="en-us">This is paragraph3!</p>
+        <p class="b">This is paragraph4!</p> 
+</body>
+</html>

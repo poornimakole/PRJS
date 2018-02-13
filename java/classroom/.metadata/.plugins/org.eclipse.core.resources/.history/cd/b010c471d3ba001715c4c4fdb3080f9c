@@ -1,0 +1,16 @@
+package com.psl.q5;
+
+public class EmpManagement {
+
+	int empId;
+	String name;
+	String address;
+	String contactNo;
+	int salary;
+	
+	public EmpManagement(int e,String n,String a,String c,int s) {
+		// TODO Auto-generated constructor stub
+		
+		
+	}
+}

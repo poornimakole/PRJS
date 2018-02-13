@@ -1,0 +1,21 @@
+package com.psl.q3;
+
+
+
+public class Client {
+  
+	public static void main(String[] args) {
+		
+		/*Storage s=new Storage(0);
+		new Counter("Thread C",s);
+		new Printer("Thread P",s);
+		*/
+		Storage st = new Storage();
+        Counter c = new Counter(st);
+        Printer p = new Printer(st);
+        new Thread(c,"Counter").start();  
+        new Thread(p,"Printer").start();
+	}
+	
+	
+}

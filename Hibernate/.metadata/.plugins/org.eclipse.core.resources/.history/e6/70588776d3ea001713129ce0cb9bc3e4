@@ -1,0 +1,40 @@
+package com.app.main;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+import com.app.model.Employee;
+
+
+public class Client {
+	
+	public static void main(String[] args) {
+		
+		List<Employee> eList=populateEmployee();
+		SessionFactory sessionfactory=new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
+	    
+		Session session=sessionfactory.openSession();
+		session.beginTransaction();
+		
+		session.getTransaction().commit();
+		session.close();
+		sessionfactory.close();
+	}
+
+	private static List<Employee> populateEmployee() {
+		// TODO Auto-generated method stub
+		List<Employee> eList= new ArrayList<Employee>();
+		
+		Employee emp1=new Employee();
+		emp1.setId(1);
+		emp1.setName("veda");
+		emp1.setAddr("mapusa");
+		emp1.setSkills("java,spring");
+		return eList;
+	}
+
+}

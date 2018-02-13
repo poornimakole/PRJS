@@ -1,0 +1,27 @@
+package com.psl.q5;
+
+public class ReadFileThread extends Thread {
+	
+	 String file1,file2;
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		ReadFileThread rft=new ReadFileThread();
+		 
+		file1=args[0];
+		file2=args[1];
+		Thread t1=new Thread(rft,args[0]);
+		Thread t2=new Thread(rft,args[1]);
+		
+		t1.start();
+		t2.start();
+		
+	}
+
+}

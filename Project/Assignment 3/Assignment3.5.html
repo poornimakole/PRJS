@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div style="background-color:blue; width: 10px;
+    height:30px;
+    position: relative;"></div>
+    <script>
+        window.onload=function(){
+            var d=document.getElementsByTagName("div")[0];
+            pos=0;
+            id1=0;
+            id=setInterval(move,1);
+          
+            function move(){
+               if(pos==window.innerWidth){
+                id1=setInterval(movereverse,1);
+               }
+              
+               else{
+               
+                   pos++;
+                   d.style.left=pos+"px";
+                   
+               }
+            }
+            function movereverse(){
+                if(pos==0){
+                    clearInterval(id1)
+                    id=setInterval(move,1); 
+                 }
+                 else{
+                     pos--;
+                   d.style.left=pos+"px";
+                 }
+             }
+        }
+    </script>
+</body>
+</html>

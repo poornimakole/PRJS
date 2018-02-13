@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        1st Number : <input type="text" id="firstNumber" /><br><br>
+        2nd Number: <input type="text" id="secondNumber" /><br><br>
+        <input type="button"  Value="Add" id="Add"/>
+        <input type="button" Value="Subtract" id="Subtract"/>
+        <input type="button"  Value="Multiply" id="Multiply"/>
+        <input type="button" Value="Divide" id="Divide"/>
+        <input type="button"  Value="Clear" id="Clear"/>
+        <input type="button"  Value="Append" id="Append"/><br><br>
+        <input type="button" Value="Result" id="Result"/>
+        <input type="text" id="result" />
+        </form>
+
+        <script>
+           
+           var res=0;
+           document.getElementById("Add").onclick=function(){
+             var n1=document.getElementById("firstNumber").value;
+             var n2=document.getElementById("secondNumber").value;
+               res=parseInt(n1)+parseInt(n2);
+           }
+           document.getElementById("Subtract").onclick=function(){
+                var n1=document.getElementById("firstNumber").value;
+                var n2=document.getElementById("secondNumber").value;
+               res=parseInt(n1)-parseInt(n2);
+           }
+           document.getElementById("Multiply").onclick=function(){
+                var n1=document.getElementById("firstNumber").value;
+                var n2=document.getElementById("secondNumber").value;
+               res=parseInt(n1)*parseInt(n2);
+           }
+           document.getElementById("Divide").onclick=function(){
+                var n1=document.getElementById("firstNumber").value;
+                var n2=document.getElementById("secondNumber").value;
+               res=parseInt(n1)/parseInt(n2);
+           }
+           document.getElementById("Clear").onclick=function(){
+            document.getElementById("result").value="";
+           }
+           document.getElementById("Append").onclick=function(){
+            document.getElementById("firstNumber").value=res;
+            document.getElementById("secondNumber").value="";
+            document.getElementById("result").value="";
+           }
+           document.getElementById("Result").onclick=function(){
+               document.getElementById("result").value=res;
+           }
+        </script>
+</body>
+</html>
